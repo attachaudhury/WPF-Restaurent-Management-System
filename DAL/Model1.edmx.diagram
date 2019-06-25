@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5d21cba70b5746c7842a6cba13ebb47a" Name="Diagram1">
+        <EntityTypeShape EntityType="RMSDBModel.tbl_Customer" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_Deal" Width="1.5" PointX="5.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_DealFoodItem" Width="1.5" PointX="7.5" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_DeliveryQueue" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_Deposit" Width="1.5" PointX="15" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_DepositHead" Width="1.5" PointX="12.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_DetuctInventory" Width="1.5" PointX="10.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_Expence" Width="1.5" PointX="14.25" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_ExpenceHead" Width="1.5" PointX="9.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_ExpenceSubHead" Width="1.5" PointX="12" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_FinanceChart" Width="1.5" PointX="0.75" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_FoodItem" Width="1.5" PointX="5.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_FoodItemCategory" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_KitchenInventory" Width="1.5" PointX="8" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_KitchenInventoryCategory" Width="1.5" PointX="5.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_PaymentMode" Width="1.5" PointX="12.75" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_PurchaseOrder" Width="1.5" PointX="14" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_PurchaseOrderItem" Width="1.5" PointX="12.75" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_Sale" Width="1.5" PointX="8.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_SaleItem" Width="1.5" PointX="10.5" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_Sitting" Width="1.5" PointX="0.75" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_Staff" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_StaffCategory" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_Supplier" Width="1.5" PointX="11.75" PointY="12.75" IsExpanded="true" />
+        <AssociationConnector Association="RMSDBModel.FK__tbl_Deliv__Custo__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSDBModel.FK__tbl_Sale__Custom__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSDBModel.FK__tbl_Deal__Catego__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSDBModel.FK__tbl_DealF__Deal___412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSDBModel.FK__tbl_DealF__FoodI__4222D4EF" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSDBModel.FK__tbl_Deliv__Deliv__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSDBModel.FK__tbl_Deliv__Sale___47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSDBModel.FK__tbl_Depos__Depos__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSDBModel.FK__tbl_Detuc__Kitch__24927208" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSDBModel.FK__tbl_Expen__Expen__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSDBModel.FK__tbl_Expen__Expen__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSDBModel.FK__tbl_Expen__Expen__276EDEB3" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSDBModel.FK__tbl_FoodI__Categ__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSDBModel.FK__tbl_Kitch__Kitch__21B6055D" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSDBModel.FK__tbl_Purch__Suppl__32E0915F" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSDBModel.FK__tbl_Sale__Staff___38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSDBModel.FK__tbl_SaleI__Sale___44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="RMSDBModel.FK__tbl_Staff__Staff__300424B4" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,15 @@
+﻿<Window x:Class="RIAB_Restaurent_Management_System.Views.customer.Form_EditCustomer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edit Customer" Height="273.609" Width="486.892" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="23,22,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_Name" HorizontalAlignment="Left" Height="33" Margin="96,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="339"/>
+        <Label Content="Number" HorizontalAlignment="Left" Margin="23,64,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_PhoneNo" HorizontalAlignment="Left" Height="35" Margin="96,48,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="339"/>
+        <Label Content="Address" HorizontalAlignment="Left" Margin="23,144,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tb_Address" MaxLength="150" HorizontalAlignment="Left" Height="72" Margin="127,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="308"/>
+        <Button Content="Update" Click="btn_UpdateCustomer" HorizontalAlignment="Left" Margin="199,189,0,0" VerticalAlignment="Top" Width="97" Height="30" Background="#FF89A4FF" BorderBrush="LightBlue"/>
+
+    </Grid>
+</Window>

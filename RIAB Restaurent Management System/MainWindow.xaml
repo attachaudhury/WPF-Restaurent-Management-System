@@ -1,0 +1,23 @@
+﻿<Window x:Class="RIAB_Restaurent_Management_System.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Start System" Height="328.503" Width="509.79" Background="Gray" Opacity="0.9" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Label x:Name="lbl_Name" Content="Name" HorizontalAlignment="Left" Margin="81,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.657,0.615" FontSize="16"/>
+        <TextBox x:Name="tb_Name" FontSize="14" BorderBrush="White" HorizontalAlignment="Left" Height="43" Margin="163,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="254" ToolTip="Please Enter User Name">
+        </TextBox>
+        <Label x:Name="lbl_Pasword" Content="Password" HorizontalAlignment="Left" Margin="79,151,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.657,0.615" FontSize="16"/>
+        <PasswordBox x:Name="tb_Pasword" KeyDown="PressEnter" BorderBrush="White" HorizontalAlignment="Left" Height="46" Margin="163,133,0,0" VerticalAlignment="Top" Width="254" ToolTip="Please Enter Password">
+
+        </PasswordBox>
+        <Button Click="btn_Login" Content="Login" HorizontalAlignment="Left" Margin="212,206,0,0" VerticalAlignment="Top" Width="108" Height="36" FontSize="14">
+
+        </Button>
+        <Button Click="btn_CloseApplication" Content="Close Application" HorizontalAlignment="Left" Margin="194,253,0,0" VerticalAlignment="Top" Width="143" Height="36" FontSize="14" Background="Red" BorderBrush="Red">
+        </Button>
+        <Label Content="Food Point" HorizontalAlignment="Left" Margin="189,25,0,0" VerticalAlignment="Top" Width="164" FontFamily="DokChampa" FontSize="24" Foreground="#FF01C5D8"/>
+        <Label Content=" Software Licenced By RIAB. 03024759550 .Release Date 29/5/2018" HorizontalAlignment="Left" Margin="0,302,0,-3" VerticalAlignment="Top" Width="510" Background="#FF807676" Height="30"/>
+
+    </Grid>
+
+</Window>

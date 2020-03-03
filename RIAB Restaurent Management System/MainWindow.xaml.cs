@@ -52,7 +52,7 @@ namespace RIAB_Restaurent_Management_System
             //string password = nextMonthString + secondCharacterofMonth;
             if (tb_Name.Text == "admin")
             {
-                DateTime licenceDate = new DateTime(2020, 3, 1);
+                DateTime licenceDate = new DateTime(2022, 3, 1);
                 if (tb_Pasword.Password == MyPrinterSetting.Pass)
                 {
                     //new RMS().Show();

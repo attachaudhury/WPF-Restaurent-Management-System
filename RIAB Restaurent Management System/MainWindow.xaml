@@ -1,22 +1,27 @@
 ﻿<Window x:Class="RIAB_Restaurent_Management_System.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Start System" Height="328.503" Width="509.79" Background="Gray" Opacity="0.9" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
+        Title="Start System" Width="500" Height="330"  Opacity="0.9" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <BitmapImage x:Key="LoginImage" CreateOptions="IgnoreImageCache" CacheOption="OnLoad" UriSource="D:\development\WPF-Restaurent-Management-System\RIAB Restaurent Management System\media\login1.jpg"/>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="{DynamicResource LoginImage}"/>
+    </Window.Background>
     <Grid>
-        <Label x:Name="lbl_Name" Content="Name" HorizontalAlignment="Left" Margin="81,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.657,0.615" FontSize="16"/>
-        <TextBox x:Name="tb_Name" FontSize="14" BorderBrush="White" HorizontalAlignment="Left" Height="43" Margin="163,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="254" ToolTip="Please Enter User Name">
+        <Label x:Name="lbl_Name" Content="Username" HorizontalAlignment="Left" Margin="135,109,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.657,0.615" Background="#00000000" Foreground="#DDFFFFFF"/>
+        <TextBox x:Name="tb_Name" FontSize="12" BorderBrush="White" HorizontalAlignment="Left" Height="35" Margin="203,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" ToolTip="Please Enter User Name" Foreground="White">
         </TextBox>
-        <Label x:Name="lbl_Pasword" Content="Password" HorizontalAlignment="Left" Margin="79,151,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.657,0.615" FontSize="16"/>
-        <PasswordBox x:Name="tb_Pasword" KeyDown="PressEnter" BorderBrush="White" HorizontalAlignment="Left" Height="46" Margin="163,133,0,0" VerticalAlignment="Top" Width="254" ToolTip="Please Enter Password">
+        <Label x:Name="lbl_Pasword" Content="Password" HorizontalAlignment="Left" Margin="135,155,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.657,0.615" Foreground="#DDFFFFFF"/>
+        <PasswordBox x:Name="tb_Pasword" KeyDown="PressEnter" BorderBrush="White" HorizontalAlignment="Left" Height="35" Margin="203,140,0,0" VerticalAlignment="Top" Width="150" ToolTip="Please Enter Password" Foreground="White">
 
         </PasswordBox>
-        <Button Click="btn_Login" Content="Login" HorizontalAlignment="Left" Margin="212,206,0,0" VerticalAlignment="Top" Width="108" Height="36" FontSize="14">
+        <Button Click="btn_Login" Content="Login" HorizontalAlignment="Left" Margin="203,191,0,0" VerticalAlignment="Top" Width="108" Height="25" FontSize="12" Background="#FFB3B9B3" Foreground="#DD343131" BorderBrush="#FF8D8B8B">
 
         </Button>
-        <Button Click="btn_CloseApplication" Content="Close Application" HorizontalAlignment="Left" Margin="194,253,0,0" VerticalAlignment="Top" Width="143" Height="36" FontSize="14" Background="Red" BorderBrush="Red">
+        <Button Click="btn_CloseApplication" Content="Close Application" HorizontalAlignment="Left" Margin="183,221,0,0" VerticalAlignment="Top" Width="143" Height="25" FontSize="12" Background="#FFB3B9B3" BorderBrush="#FF8D8B8B" Foreground="#DD343131">
         </Button>
-        <Label Content="Food Point" HorizontalAlignment="Left" Margin="189,25,0,0" VerticalAlignment="Top" Width="164" FontFamily="DokChampa" FontSize="24" Foreground="#FF01C5D8"/>
-        <Label Content=" Software Licenced By RIAB. 03024759550 .Release Date 29/5/2018" HorizontalAlignment="Left" Margin="0,302,0,-3" VerticalAlignment="Top" Width="510" Background="#FF807676" Height="30"/>
+        <Label Content=" Software By Ravicosoft. (+92-302-4759550  +92-301-5784637 www.ravicosoft.com)   Release 01/07/2020" HorizontalAlignment="Left" Margin="0,308,0,0" VerticalAlignment="Top" Width="500" Background="#FF302E2E" Height="22" Foreground="#DDFDFDFD" FontSize="10"/>
 
     </Grid>
 

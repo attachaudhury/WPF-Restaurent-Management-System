@@ -1,5 +1,4 @@
 ﻿using BLL;
-using RIAB_Restaurent_Management_System.Views.customer;
 using RIAB_Restaurent_Management_System.Views.finance;
 using RIAB_Restaurent_Management_System.Views.others;
 using RIAB_Restaurent_Management_System.Views.sale;
@@ -42,12 +41,12 @@ namespace RIAB_Restaurent_Management_System.Views
 
         private void btn_Customer(object sender, RoutedEventArgs e)
         {
-            new Form_AddNewCustomer().Show();
+            //new Form_AddNewCustomer().Show();
         }
 
         private void mi_AddNewCustomer(object sender, RoutedEventArgs e)
         {
-            new Form_AddNewCustomer().Show();
+            //new Form_AddNewCustomer().Show();
         }
 
         private void mi_NewSale(object sender, RoutedEventArgs e)

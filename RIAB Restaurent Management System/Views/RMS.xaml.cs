@@ -17,6 +17,7 @@ using RIAB_Restaurent_Management_System.Views.kitchen;
 using RIAB_Restaurent_Management_System.Views.sale;
 using RIAB_Restaurent_Management_System.Views.order;
 using RIAB_Restaurent_Management_System.Views.others;
+using RIAB_Restaurent_Management_System.Views.person;
 using BLL;
 using BLL.DBOperations;
 using RIAB_Restaurent_Management_System.Views.staff;
@@ -34,7 +35,8 @@ namespace RIAB_Restaurent_Management_System.Views
 
         private void mi_AddNewCustomer(object sender, RoutedEventArgs e)
         {
-            new Window_AddNewStaff("customer").Show();
+            //new Window_AddNewStaff("customer").Show();
+            new person.Add("customer").Show();
         }
         private void mi_LogOut(object sender, RoutedEventArgs e)
         {
@@ -48,7 +50,7 @@ namespace RIAB_Restaurent_Management_System.Views
 
         private void mi_ViewAllCustomers(object sender, RoutedEventArgs e)
         {
-            new Form_ViewAllCustomers().Show();
+            new person.List("customer").Show();
         }
 
         private void mi_ManageFoodIemCategories(object sender, RoutedEventArgs e)
@@ -175,12 +177,14 @@ namespace RIAB_Restaurent_Management_System.Views
 
         private void mi_AddStaff(object sender, RoutedEventArgs e)
         {
-            new Window_AddNewStaff("staff").Show();
+            //new Window_AddNewStaff("staff").Show();
+            new person.Add("staff").Show();
         }
 
         private void mi_AllStaff(object sender, RoutedEventArgs e)
         {
-            new Window_ViewAllStaff().Show();
+            //new Window_ViewAllStaff().Show();
+            new person.List("staff").Show();
         }
 
         private void mi_FoodItemSalesReport(object sender, RoutedEventArgs e)
@@ -236,7 +240,7 @@ namespace RIAB_Restaurent_Management_System.Views
 
         private void btn_Customer(object sender, RoutedEventArgs e)
         {
-            new Form_AddNewCustomer().Show();
+            new person.Add("customer").Show();
         }
 
         private void mi_NewDepositHead(object sender, RoutedEventArgs e)

@@ -47,6 +47,8 @@
         <AssociationConnector Association="RMSDBModel.FK__tbl_Sale__Staff___38996AB5" ManuallyRouted="false" />
         <AssociationConnector Association="RMSDBModel.FK__tbl_SaleI__Sale___44FF419A" ManuallyRouted="false" />
         <AssociationConnector Association="RMSDBModel.FK__tbl_Staff__Staff__300424B4" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="RMSDBModel.tbl_Person" Width="1.5" PointX="5.375" PointY="0.75" />
+        <AssociationConnector Association="RMSDBModel.FK__tbl_Deliv__Sale___5BE2A6F2" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

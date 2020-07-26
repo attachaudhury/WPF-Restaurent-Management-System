@@ -17,9 +17,6 @@
     <Setting Name="Footer" Type="System.String" Scope="User">
       <Value Profile="(Default)">Free home delivery. Call at 0332-4989167   0322-4574133</Value>
     </Setting>
-    <Setting Name="Pass" Type="System.String" Scope="User">
-      <Value Profile="(Default)">123456</Value>
-    </Setting>
     <Setting Name="Reciptlineheight" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">5</Value>
     </Setting>

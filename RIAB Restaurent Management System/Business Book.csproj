@@ -116,15 +116,6 @@
     <Compile Include="Views\kitchen\Form_LinkKitchenInventory.xaml.cs">
       <DependentUpon>Form_LinkKitchenInventory.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\customer\Form_AddNewCustomer.xaml.cs">
-      <DependentUpon>Form_AddNewCustomer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\customer\Form_EditCustomer.xaml.cs">
-      <DependentUpon>Form_EditCustomer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\customer\Form_ViewAllCustomers.xaml.cs">
-      <DependentUpon>Form_ViewAllCustomers.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\finance\Form_AddNewExpence.xaml.cs">
       <DependentUpon>Form_AddNewExpence.xaml</DependentUpon>
     </Compile>
@@ -221,9 +212,6 @@
     <Compile Include="Views\staff\Window_AddNewStaff.xaml.cs">
       <DependentUpon>Window_AddNewStaff.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\staff\Window_AddStaffCategory.xaml.cs">
-      <DependentUpon>Window_AddStaffCategory.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\staff\Window_ViewAllStaff.xaml.cs">
       <DependentUpon>Window_ViewAllStaff.xaml</DependentUpon>
     </Compile>
@@ -271,18 +259,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\kitchen\Form_LinkKitchenInventory.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\customer\Form_AddNewCustomer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\customer\Form_EditCustomer.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\customer\Form_ViewAllCustomers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -414,10 +390,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\staff\Window_AddStaffCategory.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\staff\Window_ViewAllStaff.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -481,6 +453,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\person\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

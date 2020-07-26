@@ -64,6 +64,7 @@
     <Compile Include="DBOperations\ExpenceSubHead.cs" />
     <Compile Include="DBOperations\Expence.cs" />
     <Compile Include="DBOperations\FinanceChart.cs" />
+    <Compile Include="DBOperations\Person.cs" />
     <Compile Include="DBOperations\PurchaseOrder.cs" />
     <Compile Include="DBOperations\SaleItem.cs" />
     <Compile Include="DBOperations\Sale.cs" />

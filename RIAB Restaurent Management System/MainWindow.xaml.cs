@@ -14,7 +14,9 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using RIAB_Restaurent_Management_System.Views;
 using System.Globalization;
+using DAL;
 using BLL;
+using BLL.DBOperations;
 
 namespace RIAB_Restaurent_Management_System
 {
@@ -29,7 +31,6 @@ namespace RIAB_Restaurent_Management_System
         private void btn_Login(object sender, RoutedEventArgs e)
         {
             login();
-            
         }
 
         private void btn_CloseApplication(object sender, RoutedEventArgs e)
@@ -50,41 +51,14 @@ namespace RIAB_Restaurent_Management_System
             //char[] monthNameArray = DateTime.Now.ToString("MMM", CultureInfo.InvariantCulture).ToCharArray();
             //char secondCharacterofMonth = monthNameArray[1];
             //string password = nextMonthString + secondCharacterofMonth;
-            if (tb_Name.Text == "admin")
-            {
-                DateTime licenceDate = new DateTime(2022, 3, 1);
-                if (tb_Pasword.Password == MyPrinterSetting.Pass)
-                {
-                    //new RMS().Show();
-                    //Close();
-                    if (DateTime.Now < licenceDate)
-                    {
-                        new RMS().Show();
-                        Close();
-                    }
-                    else
-                    {
-                        BLL.AutoClosingMessageBox.Show("Please renew Licence", "Failed", 3000);
-                    }
-
-                } else if (tb_Pasword.Password == "adminmasterpassword")
-                {
-                    //new RMS().Show();
-                    //Close();
-                    if (DateTime.Now < licenceDate)
-                    {
-                        new RMS().Show();
-                        Close();
-                    }
-                    else
-                    {
-                        BLL.AutoClosingMessageBox.Show("Please renew Licence", "Failed", 3000);
-                    }
+            tbl_Person user = Person.login(tb_Name.Text, tb_Pasword.Password);
+            if (user!=null) {
+                Person.loggedinuser = user;
+                if (user.Role == "admin") {
+                    new RMS().Show();
+                    Close();
                 }
-            }
-            else if (tb_Name.Text == "user")
-            {
-                if (tb_Pasword.Password == "12345")
+                else
                 {
                     new User().Show();
                     Close();
@@ -92,8 +66,54 @@ namespace RIAB_Restaurent_Management_System
             }
             else
             {
-                BLL.AutoClosingMessageBox.Show("Wrong User Name and Password", "Failed", 3000);
+                    BLL.AutoClosingMessageBox.Show("Username or password not exists", "Failed", 3000);
+
             }
+
+            //if (tb_Name.Text == "admin")
+            //{
+            //    DateTime licenceDate = new DateTime(2022, 3, 1);
+            //    if (tb_Pasword.Password == MyPrinterSetting.Pass)
+            //    {
+            //        //new RMS().Show();
+            //        //Close();
+            //        if (DateTime.Now < licenceDate)
+            //        {
+            //            new RMS().Show();
+            //            Close();
+            //        }
+            //        else
+            //        {
+            //            BLL.AutoClosingMessageBox.Show("Please renew Licence", "Failed", 3000);
+            //        }
+
+            //    } else if (tb_Pasword.Password == "adminmasterpassword")
+            //    {
+            //        //new RMS().Show();
+            //        //Close();
+            //        if (DateTime.Now < licenceDate)
+            //        {
+            //            new RMS().Show();
+            //            Close();
+            //        }
+            //        else
+            //        {
+            //            BLL.AutoClosingMessageBox.Show("Please renew Licence", "Failed", 3000);
+            //        }
+            //    }
+            //}
+            //else if (tb_Name.Text == "user")
+            //{
+            //    if (tb_Pasword.Password == "12345")
+            //    {
+            //        new User().Show();
+            //        Close();
+            //    }
+            //}
+            //else
+            //{
+            //    BLL.AutoClosingMessageBox.Show("Wrong User Name and Password", "Failed", 3000);
+            //}
         }
     }
 }

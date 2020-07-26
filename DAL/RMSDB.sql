@@ -7,6 +7,16 @@ GO
 use RMSDB 
 GO
 
+CREATE TABLE tbl_Person(
+	Id int IDENTITY(0,1) NOT NULL PRIMARY KEY,
+	[Address] varchar(200),
+	[Name] varchar(20),
+	[Password] varchar(20),
+	UserName varchar(20),
+	Phone varchar(30),
+	Phone2 varchar(30),
+	[Role] varchar(20) default 'user'
+)
 
 CREATE TABLE tbl_Sitting(
 	Id int IDENTITY(1,1) NOT NULL PRIMARY KEY,

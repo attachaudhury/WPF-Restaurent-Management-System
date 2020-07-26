@@ -49,5 +49,6 @@ namespace DAL
         public virtual DbSet<tbl_Staff> tbl_Staff { get; set; }
         public virtual DbSet<tbl_StaffCategory> tbl_StaffCategory { get; set; }
         public virtual DbSet<tbl_Supplier> tbl_Supplier { get; set; }
+        public virtual DbSet<tbl_Person> tbl_Person { get; set; }
     }
 }

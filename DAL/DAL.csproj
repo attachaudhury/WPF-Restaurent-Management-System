@@ -114,6 +114,9 @@
     <Compile Include="tbl_PaymentMode.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="tbl_Person.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="tbl_PurchaseOrder.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

@@ -29,7 +29,6 @@ namespace RIAB_Restaurent_Management_System.Views.others
             tb_Title.Text = MyPrinterSetting.Title;
             tb_SubTitle.Text = MyPrinterSetting.SubTitle;
             tb_Footer.Text = MyPrinterSetting.Footer;
-            tb_Pass.Text = MyPrinterSetting.Pass;
             tb_Reciptlineheight.Text = Convert.ToString(MyPrinterSetting.Reciptlineheight);
         }
 
@@ -42,9 +41,8 @@ namespace RIAB_Restaurent_Management_System.Views.others
                 string title = tb_Title.Text;
                 string subTitle = tb_SubTitle.Text;
                 string footer = tb_Footer.Text;
-                string pass = tb_Pass.Text;
                 int Reciptlineheight = Convert.ToInt32(tb_Reciptlineheight.Text);
-                MyPrinterSetting.saveSettings(pageWidth, marginLeft, title, subTitle, footer,pass, Reciptlineheight);
+                MyPrinterSetting.saveSettings(pageWidth, marginLeft, title, subTitle, footer, Reciptlineheight);
                 AutoClosingMessageBox.Show("Setting Saved","Success",2000);
                 
             }

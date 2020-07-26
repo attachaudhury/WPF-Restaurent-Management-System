@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="RMSDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="RMSDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="tbl_Customer">
           <Key>
             <PropertyRef Name="Id" />
@@ -155,6 +155,19 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="tbl_Person">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="200" />
+          <Property Name="Name" Type="varchar" MaxLength="20" />
+          <Property Name="Password" Type="varchar" MaxLength="20" />
+          <Property Name="UserName" Type="varchar" MaxLength="20" />
+          <Property Name="Phone" Type="varchar" MaxLength="30" />
+          <Property Name="Phone2" Type="varchar" MaxLength="30" />
+          <Property Name="Role" Type="varchar" MaxLength="20" />
+        </EntityType>
         <EntityType Name="tbl_PurchaseOrder">
           <Key>
             <PropertyRef Name="Id" />
@@ -205,6 +218,7 @@
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="20" />
+          <Property Name="Designation" Type="varchar" MaxLength="20" />
           <Property Name="UserName" Type="varchar" MaxLength="20" />
           <Property Name="Password" Type="varchar" MaxLength="20" />
           <Property Name="CNIC" Type="varchar" MaxLength="20" />
@@ -235,7 +249,7 @@
           <Property Name="Address" Type="varchar" MaxLength="50" />
           <Property Name="Balance" Type="float" />
         </EntityType>
-        <Association Name="FK__tbl_Deal__Catego__3E52440B">
+        <Association Name="FK__tbl_Deal__Catego__52593CB8">
           <End Role="tbl_FoodItemCategory" Type="Self.tbl_FoodItemCategory" Multiplicity="0..1" />
           <End Role="tbl_Deal" Type="Self.tbl_Deal" Multiplicity="*" />
           <ReferentialConstraint>
@@ -247,7 +261,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tbl_DealF__Deal___412EB0B6">
+        <Association Name="FK__tbl_DealF__Deal___5535A963">
           <End Role="tbl_Deal" Type="Self.tbl_Deal" Multiplicity="0..1" />
           <End Role="tbl_DealFoodItem" Type="Self.tbl_DealFoodItem" Multiplicity="*" />
           <ReferentialConstraint>
@@ -259,7 +273,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tbl_DealF__FoodI__4222D4EF">
+        <Association Name="FK__tbl_DealF__FoodI__5629CD9C">
           <End Role="tbl_FoodItem" Type="Self.tbl_FoodItem" Multiplicity="0..1" />
           <End Role="tbl_DealFoodItem" Type="Self.tbl_DealFoodItem" Multiplicity="*" />
           <ReferentialConstraint>
@@ -271,7 +285,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tbl_Deliv__Custo__48CFD27E">
+        <Association Name="FK__tbl_Deliv__Custo__5CD6CB2B">
           <End Role="tbl_Customer" Type="Self.tbl_Customer" Multiplicity="0..1" />
           <End Role="tbl_DeliveryQueue" Type="Self.tbl_DeliveryQueue" Multiplicity="*" />
           <ReferentialConstraint>
@@ -283,7 +297,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tbl_Deliv__Deliv__49C3F6B7">
+        <Association Name="FK__tbl_Deliv__Deliv__5DCAEF64">
           <End Role="tbl_Staff" Type="Self.tbl_Staff" Multiplicity="0..1" />
           <End Role="tbl_DeliveryQueue" Type="Self.tbl_DeliveryQueue" Multiplicity="*" />
           <ReferentialConstraint>
@@ -295,11 +309,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tbl_Deliv__Sale___47DBAE45">
-          <End Role="tbl_FoodItemCategory" Type="Self.tbl_FoodItemCategory" Multiplicity="0..1" />
+        <Association Name="FK__tbl_Deliv__Sale___5BE2A6F2">
+          <End Role="tbl_Sale" Type="Self.tbl_Sale" Multiplicity="0..1" />
           <End Role="tbl_DeliveryQueue" Type="Self.tbl_DeliveryQueue" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="tbl_FoodItemCategory">
+            <Principal Role="tbl_Sale">
               <PropertyRef Name="Id" />
             </Principal>
             <Dependent Role="tbl_DeliveryQueue">
@@ -307,7 +321,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tbl_Depos__Depos__4CA06362">
+        <Association Name="FK__tbl_Depos__Depos__60A75C0F">
           <End Role="tbl_DepositHead" Type="Self.tbl_DepositHead" Multiplicity="0..1" />
           <End Role="tbl_Deposit" Type="Self.tbl_Deposit" Multiplicity="*" />
           <ReferentialConstraint>
@@ -319,7 +333,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tbl_Detuc__Kitch__24927208">
+        <Association Name="FK__tbl_Detuc__Kitch__38996AB5">
           <End Role="tbl_KitchenInventory" Type="Self.tbl_KitchenInventory" Multiplicity="0..1" />
           <End Role="tbl_DetuctInventory" Type="Self.tbl_DetuctInventory" Multiplicity="*" />
           <ReferentialConstraint>
@@ -331,7 +345,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tbl_Expen__Expen__276EDEB3">
+        <Association Name="FK__tbl_Expen__Expen__3B75D760">
           <End Role="tbl_ExpenceHead" Type="Self.tbl_ExpenceHead" Multiplicity="0..1" />
           <End Role="tbl_ExpenceSubHead" Type="Self.tbl_ExpenceSubHead" Multiplicity="*" />
           <ReferentialConstraint>
@@ -343,7 +357,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tbl_Expen__Expen__2A4B4B5E">
+        <Association Name="FK__tbl_Expen__Expen__3E52440B">
           <End Role="tbl_ExpenceHead" Type="Self.tbl_ExpenceHead" Multiplicity="0..1" />
           <End Role="tbl_Expence" Type="Self.tbl_Expence" Multiplicity="*" />
           <ReferentialConstraint>
@@ -355,7 +369,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tbl_Expen__Expen__2B3F6F97">
+        <Association Name="FK__tbl_Expen__Expen__3F466844">
           <End Role="tbl_ExpenceSubHead" Type="Self.tbl_ExpenceSubHead" Multiplicity="0..1" />
           <End Role="tbl_Expence" Type="Self.tbl_Expence" Multiplicity="*" />
           <ReferentialConstraint>
@@ -367,7 +381,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tbl_FoodI__Categ__3B75D760">
+        <Association Name="FK__tbl_FoodI__Categ__4F7CD00D">
           <End Role="tbl_FoodItemCategory" Type="Self.tbl_FoodItemCategory" Multiplicity="0..1" />
           <End Role="tbl_FoodItem" Type="Self.tbl_FoodItem" Multiplicity="*" />
           <ReferentialConstraint>
@@ -379,7 +393,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tbl_Kitch__Kitch__21B6055D">
+        <Association Name="FK__tbl_Kitch__Kitch__35BCFE0A">
           <End Role="tbl_KitchenInventoryCategory" Type="Self.tbl_KitchenInventoryCategory" Multiplicity="0..1" />
           <End Role="tbl_KitchenInventory" Type="Self.tbl_KitchenInventory" Multiplicity="*" />
           <ReferentialConstraint>
@@ -391,7 +405,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tbl_Purch__Suppl__32E0915F">
+        <Association Name="FK__tbl_Purch__Suppl__46E78A0C">
           <End Role="tbl_Supplier" Type="Self.tbl_Supplier" Multiplicity="0..1" />
           <End Role="tbl_PurchaseOrder" Type="Self.tbl_PurchaseOrder" Multiplicity="*" />
           <ReferentialConstraint>
@@ -403,7 +417,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tbl_Sale__Custom__37A5467C">
+        <Association Name="FK__tbl_Sale__Custom__4BAC3F29">
           <End Role="tbl_Customer" Type="Self.tbl_Customer" Multiplicity="0..1" />
           <End Role="tbl_Sale" Type="Self.tbl_Sale" Multiplicity="*" />
           <ReferentialConstraint>
@@ -415,7 +429,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tbl_Sale__Staff___38996AB5">
+        <Association Name="FK__tbl_Sale__Staff___4CA06362">
           <End Role="tbl_Staff" Type="Self.tbl_Staff" Multiplicity="0..1" />
           <End Role="tbl_Sale" Type="Self.tbl_Sale" Multiplicity="*" />
           <ReferentialConstraint>
@@ -427,7 +441,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tbl_SaleI__Sale___44FF419A">
+        <Association Name="FK__tbl_SaleI__Sale___59063A47">
           <End Role="tbl_Sale" Type="Self.tbl_Sale" Multiplicity="0..1" />
           <End Role="tbl_SaleItem" Type="Self.tbl_SaleItem" Multiplicity="*" />
           <ReferentialConstraint>
@@ -439,7 +453,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__tbl_Staff__Staff__300424B4">
+        <Association Name="FK__tbl_Staff__Staff__440B1D61">
           <End Role="tbl_StaffCategory" Type="Self.tbl_StaffCategory" Multiplicity="0..1" />
           <End Role="tbl_Staff" Type="Self.tbl_Staff" Multiplicity="*" />
           <ReferentialConstraint>
@@ -468,6 +482,7 @@
           <EntitySet Name="tbl_KitchenInventory" EntityType="Self.tbl_KitchenInventory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_KitchenInventoryCategory" EntityType="Self.tbl_KitchenInventoryCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_PaymentMode" EntityType="Self.tbl_PaymentMode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbl_Person" EntityType="Self.tbl_Person" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_PurchaseOrder" EntityType="Self.tbl_PurchaseOrder" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_PurchaseOrderItem" EntityType="Self.tbl_PurchaseOrderItem" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Sale" EntityType="Self.tbl_Sale" Schema="dbo" store:Type="Tables" />
@@ -476,81 +491,80 @@
           <EntitySet Name="tbl_Staff" EntityType="Self.tbl_Staff" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_StaffCategory" EntityType="Self.tbl_StaffCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Supplier" EntityType="Self.tbl_Supplier" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__tbl_Deal__Catego__3E52440B" Association="Self.FK__tbl_Deal__Catego__3E52440B">
+          <AssociationSet Name="FK__tbl_Deal__Catego__52593CB8" Association="Self.FK__tbl_Deal__Catego__52593CB8">
             <End Role="tbl_FoodItemCategory" EntitySet="tbl_FoodItemCategory" />
             <End Role="tbl_Deal" EntitySet="tbl_Deal" />
           </AssociationSet>
-          <AssociationSet Name="FK__tbl_DealF__Deal___412EB0B6" Association="Self.FK__tbl_DealF__Deal___412EB0B6">
+          <AssociationSet Name="FK__tbl_DealF__Deal___5535A963" Association="Self.FK__tbl_DealF__Deal___5535A963">
             <End Role="tbl_Deal" EntitySet="tbl_Deal" />
             <End Role="tbl_DealFoodItem" EntitySet="tbl_DealFoodItem" />
           </AssociationSet>
-          <AssociationSet Name="FK__tbl_DealF__FoodI__4222D4EF" Association="Self.FK__tbl_DealF__FoodI__4222D4EF">
+          <AssociationSet Name="FK__tbl_DealF__FoodI__5629CD9C" Association="Self.FK__tbl_DealF__FoodI__5629CD9C">
             <End Role="tbl_FoodItem" EntitySet="tbl_FoodItem" />
             <End Role="tbl_DealFoodItem" EntitySet="tbl_DealFoodItem" />
           </AssociationSet>
-          <AssociationSet Name="FK__tbl_Deliv__Custo__48CFD27E" Association="Self.FK__tbl_Deliv__Custo__48CFD27E">
+          <AssociationSet Name="FK__tbl_Deliv__Custo__5CD6CB2B" Association="Self.FK__tbl_Deliv__Custo__5CD6CB2B">
             <End Role="tbl_Customer" EntitySet="tbl_Customer" />
             <End Role="tbl_DeliveryQueue" EntitySet="tbl_DeliveryQueue" />
           </AssociationSet>
-          <AssociationSet Name="FK__tbl_Deliv__Deliv__49C3F6B7" Association="Self.FK__tbl_Deliv__Deliv__49C3F6B7">
+          <AssociationSet Name="FK__tbl_Deliv__Deliv__5DCAEF64" Association="Self.FK__tbl_Deliv__Deliv__5DCAEF64">
             <End Role="tbl_Staff" EntitySet="tbl_Staff" />
             <End Role="tbl_DeliveryQueue" EntitySet="tbl_DeliveryQueue" />
           </AssociationSet>
-          <AssociationSet Name="FK__tbl_Deliv__Sale___47DBAE45" Association="Self.FK__tbl_Deliv__Sale___47DBAE45">
-            <End Role="tbl_FoodItemCategory" EntitySet="tbl_FoodItemCategory" />
+          <AssociationSet Name="FK__tbl_Deliv__Sale___5BE2A6F2" Association="Self.FK__tbl_Deliv__Sale___5BE2A6F2">
+            <End Role="tbl_Sale" EntitySet="tbl_Sale" />
             <End Role="tbl_DeliveryQueue" EntitySet="tbl_DeliveryQueue" />
           </AssociationSet>
-          <AssociationSet Name="FK__tbl_Depos__Depos__4CA06362" Association="Self.FK__tbl_Depos__Depos__4CA06362">
+          <AssociationSet Name="FK__tbl_Depos__Depos__60A75C0F" Association="Self.FK__tbl_Depos__Depos__60A75C0F">
             <End Role="tbl_DepositHead" EntitySet="tbl_DepositHead" />
             <End Role="tbl_Deposit" EntitySet="tbl_Deposit" />
           </AssociationSet>
-          <AssociationSet Name="FK__tbl_Detuc__Kitch__24927208" Association="Self.FK__tbl_Detuc__Kitch__24927208">
+          <AssociationSet Name="FK__tbl_Detuc__Kitch__38996AB5" Association="Self.FK__tbl_Detuc__Kitch__38996AB5">
             <End Role="tbl_KitchenInventory" EntitySet="tbl_KitchenInventory" />
             <End Role="tbl_DetuctInventory" EntitySet="tbl_DetuctInventory" />
           </AssociationSet>
-          <AssociationSet Name="FK__tbl_Expen__Expen__276EDEB3" Association="Self.FK__tbl_Expen__Expen__276EDEB3">
+          <AssociationSet Name="FK__tbl_Expen__Expen__3B75D760" Association="Self.FK__tbl_Expen__Expen__3B75D760">
             <End Role="tbl_ExpenceHead" EntitySet="tbl_ExpenceHead" />
             <End Role="tbl_ExpenceSubHead" EntitySet="tbl_ExpenceSubHead" />
           </AssociationSet>
-          <AssociationSet Name="FK__tbl_Expen__Expen__2A4B4B5E" Association="Self.FK__tbl_Expen__Expen__2A4B4B5E">
+          <AssociationSet Name="FK__tbl_Expen__Expen__3E52440B" Association="Self.FK__tbl_Expen__Expen__3E52440B">
             <End Role="tbl_ExpenceHead" EntitySet="tbl_ExpenceHead" />
             <End Role="tbl_Expence" EntitySet="tbl_Expence" />
           </AssociationSet>
-          <AssociationSet Name="FK__tbl_Expen__Expen__2B3F6F97" Association="Self.FK__tbl_Expen__Expen__2B3F6F97">
+          <AssociationSet Name="FK__tbl_Expen__Expen__3F466844" Association="Self.FK__tbl_Expen__Expen__3F466844">
             <End Role="tbl_ExpenceSubHead" EntitySet="tbl_ExpenceSubHead" />
             <End Role="tbl_Expence" EntitySet="tbl_Expence" />
           </AssociationSet>
-          <AssociationSet Name="FK__tbl_FoodI__Categ__3B75D760" Association="Self.FK__tbl_FoodI__Categ__3B75D760">
+          <AssociationSet Name="FK__tbl_FoodI__Categ__4F7CD00D" Association="Self.FK__tbl_FoodI__Categ__4F7CD00D">
             <End Role="tbl_FoodItemCategory" EntitySet="tbl_FoodItemCategory" />
             <End Role="tbl_FoodItem" EntitySet="tbl_FoodItem" />
           </AssociationSet>
-          <AssociationSet Name="FK__tbl_Kitch__Kitch__21B6055D" Association="Self.FK__tbl_Kitch__Kitch__21B6055D">
+          <AssociationSet Name="FK__tbl_Kitch__Kitch__35BCFE0A" Association="Self.FK__tbl_Kitch__Kitch__35BCFE0A">
             <End Role="tbl_KitchenInventoryCategory" EntitySet="tbl_KitchenInventoryCategory" />
             <End Role="tbl_KitchenInventory" EntitySet="tbl_KitchenInventory" />
           </AssociationSet>
-          <AssociationSet Name="FK__tbl_Purch__Suppl__32E0915F" Association="Self.FK__tbl_Purch__Suppl__32E0915F">
+          <AssociationSet Name="FK__tbl_Purch__Suppl__46E78A0C" Association="Self.FK__tbl_Purch__Suppl__46E78A0C">
             <End Role="tbl_Supplier" EntitySet="tbl_Supplier" />
             <End Role="tbl_PurchaseOrder" EntitySet="tbl_PurchaseOrder" />
           </AssociationSet>
-          <AssociationSet Name="FK__tbl_Sale__Custom__37A5467C" Association="Self.FK__tbl_Sale__Custom__37A5467C">
+          <AssociationSet Name="FK__tbl_Sale__Custom__4BAC3F29" Association="Self.FK__tbl_Sale__Custom__4BAC3F29">
             <End Role="tbl_Customer" EntitySet="tbl_Customer" />
             <End Role="tbl_Sale" EntitySet="tbl_Sale" />
           </AssociationSet>
-          <AssociationSet Name="FK__tbl_Sale__Staff___38996AB5" Association="Self.FK__tbl_Sale__Staff___38996AB5">
+          <AssociationSet Name="FK__tbl_Sale__Staff___4CA06362" Association="Self.FK__tbl_Sale__Staff___4CA06362">
             <End Role="tbl_Staff" EntitySet="tbl_Staff" />
             <End Role="tbl_Sale" EntitySet="tbl_Sale" />
           </AssociationSet>
-          <AssociationSet Name="FK__tbl_SaleI__Sale___44FF419A" Association="Self.FK__tbl_SaleI__Sale___44FF419A">
+          <AssociationSet Name="FK__tbl_SaleI__Sale___59063A47" Association="Self.FK__tbl_SaleI__Sale___59063A47">
             <End Role="tbl_Sale" EntitySet="tbl_Sale" />
             <End Role="tbl_SaleItem" EntitySet="tbl_SaleItem" />
           </AssociationSet>
-          <AssociationSet Name="FK__tbl_Staff__Staff__300424B4" Association="Self.FK__tbl_Staff__Staff__300424B4">
+          <AssociationSet Name="FK__tbl_Staff__Staff__440B1D61" Association="Self.FK__tbl_Staff__Staff__440B1D61">
             <End Role="tbl_StaffCategory" EntitySet="tbl_StaffCategory" />
             <End Role="tbl_Staff" EntitySet="tbl_Staff" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="RMSDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -601,6 +615,7 @@
           <NavigationProperty Name="tbl_Customer" Relationship="Self.FK__tbl_Deliv__Custo__48CFD27E" FromRole="tbl_DeliveryQueue" ToRole="tbl_Customer" />
           <NavigationProperty Name="tbl_Staff" Relationship="Self.FK__tbl_Deliv__Deliv__49C3F6B7" FromRole="tbl_DeliveryQueue" ToRole="tbl_Staff" />
           <NavigationProperty Name="tbl_FoodItemCategory" Relationship="Self.FK__tbl_Deliv__Sale___47DBAE45" FromRole="tbl_DeliveryQueue" ToRole="tbl_FoodItemCategory" />
+          <NavigationProperty Name="tbl_Sale" Relationship="RMSDBModel.FK__tbl_Deliv__Sale___5BE2A6F2" FromRole="tbl_DeliveryQueue" ToRole="tbl_Sale" />
         </EntityType>
         <EntityType Name="tbl_Deposit">
           <Key>
@@ -761,6 +776,7 @@
           <NavigationProperty Name="tbl_Customer" Relationship="Self.FK__tbl_Sale__Custom__37A5467C" FromRole="tbl_Sale" ToRole="tbl_Customer" />
           <NavigationProperty Name="tbl_Staff" Relationship="Self.FK__tbl_Sale__Staff___38996AB5" FromRole="tbl_Sale" ToRole="tbl_Staff" />
           <NavigationProperty Name="tbl_SaleItem" Relationship="Self.FK__tbl_SaleI__Sale___44FF419A" FromRole="tbl_Sale" ToRole="tbl_SaleItem" />
+          <NavigationProperty Name="tbl_DeliveryQueue" Relationship="RMSDBModel.FK__tbl_Deliv__Sale___5BE2A6F2" FromRole="tbl_Sale" ToRole="tbl_DeliveryQueue" />
         </EntityType>
         <EntityType Name="tbl_SaleItem">
           <Key>
@@ -800,6 +816,7 @@
           <NavigationProperty Name="tbl_DeliveryQueue" Relationship="Self.FK__tbl_Deliv__Deliv__49C3F6B7" FromRole="tbl_Staff" ToRole="tbl_DeliveryQueue" />
           <NavigationProperty Name="tbl_Sale" Relationship="Self.FK__tbl_Sale__Staff___38996AB5" FromRole="tbl_Staff" ToRole="tbl_Sale" />
           <NavigationProperty Name="tbl_StaffCategory" Relationship="Self.FK__tbl_Staff__Staff__300424B4" FromRole="tbl_Staff" ToRole="tbl_StaffCategory" />
+          <Property Name="Designation" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tbl_StaffCategory">
           <Key>
@@ -1133,7 +1150,37 @@
             <End Role="tbl_StaffCategory" EntitySet="tbl_StaffCategory" />
             <End Role="tbl_Staff" EntitySet="tbl_Staff" />
           </AssociationSet>
+          <EntitySet Name="tbl_Person" EntityType="RMSDBModel.tbl_Person" />
+          <AssociationSet Name="FK__tbl_Deliv__Sale___5BE2A6F2" Association="RMSDBModel.FK__tbl_Deliv__Sale___5BE2A6F2">
+            <End Role="tbl_Sale" EntitySet="tbl_Sale" />
+            <End Role="tbl_DeliveryQueue" EntitySet="tbl_DeliveryQueue" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="tbl_Person">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="UserName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Phone2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Role" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK__tbl_Deliv__Sale___5BE2A6F2">
+          <End Type="RMSDBModel.tbl_Sale" Role="tbl_Sale" Multiplicity="0..1" />
+          <End Type="RMSDBModel.tbl_DeliveryQueue" Role="tbl_DeliveryQueue" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tbl_Sale">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="tbl_DeliveryQueue">
+              <PropertyRef Name="Sale_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1358,6 +1405,7 @@
           <EntitySetMapping Name="tbl_Staff">
             <EntityTypeMapping TypeName="RMSDBModel.tbl_Staff">
               <MappingFragment StoreEntitySet="tbl_Staff">
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
@@ -1391,6 +1439,20 @@
                 <ScalarProperty Name="PhoneNo" ColumnName="PhoneNo" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
                 <ScalarProperty Name="Balance" ColumnName="Balance" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbl_Person">
+            <EntityTypeMapping TypeName="RMSDBModel.tbl_Person">
+              <MappingFragment StoreEntitySet="tbl_Person">
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

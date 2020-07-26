@@ -19,8 +19,6 @@
         <Label Content="Margin Left" HorizontalAlignment="Left" Margin="241,69,0,0" VerticalAlignment="Top" Height="37"/>
         <TextBox Name="tb_MarginLeft" HorizontalAlignment="Left" Height="33" Margin="317,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="117"/>
         <Button Content="Save" Click="btn_Save" Background="Green" BorderBrush="DarkGreen" HorizontalAlignment="Left" Margin="280,523,0,0" VerticalAlignment="Top" Width="203" Height="39"/>
-        <Label Content="Password" HorizontalAlignment="Left" Margin="475,65,0,0" VerticalAlignment="Top" Height="38"/>
-        <TextBox x:Name="tb_Pass" HorizontalAlignment="Left" Height="44" Margin="551,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164"/>
         <Label Content="Line Height" HorizontalAlignment="Left" Margin="79,433,0,0" VerticalAlignment="Top" Height="38"/>
         <TextBox x:Name="tb_Reciptlineheight" HorizontalAlignment="Left" Height="68" Margin="155,393,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="534"/>
 

@@ -22,15 +22,25 @@ namespace RIAB_Restaurent_Management_System.Views.staff
     /// </summary>
     public partial class Window_AddNewStaff : Window
     {
-        public Window_AddNewStaff()
+        public Window_AddNewStaff(string roletype)
         {
             InitializeComponent();
-            foreach (tbl_StaffCategory item in StaffCategories.getAll())
-            {
-                cb_Cat.ItemsSource = StaffCategories.getAll();
-                cb_Cat.DisplayMemberPath = "Name";
-                cb_Cat.SelectedValuePath = "Id";
+            //foreach (tbl_StaffCategory item in StaffCategories.getAll())
+            //{
+            //    cb_Role.ItemsSource = StaffCategories.getAll();
+            //    cb_Role.DisplayMemberPath = "Name";
+            //    cb_Role.SelectedValuePath = "Id";
+            //}
+
+            var roles = new string[] {"admin" ,"user","customer"};
+            if (roletype == "staff"){
+                roles = new string[] { "admin", "user" };
             }
+            else if (roletype == "customer")
+            {
+                roles = new string[] { "customer"};
+            }
+            cb_Role.ItemsSource = roles;
         }
 
         private void btn_Save(object sender, RoutedEventArgs e)
@@ -39,32 +49,25 @@ namespace RIAB_Restaurent_Management_System.Views.staff
             {
                 return;
             }
-            if (cb_Cat.SelectedValue == null)
+            if (cb_Role.SelectedValue == null)
             {
                 return;
             }
-            tbl_Staff staff = new tbl_Staff();
+            tbl_Person staff = new tbl_Person();
             staff.Name = tb_Name.Text;
-            staff.StaffCategory_Id = (int)cb_Cat.SelectedValue;
-            staff.Salary = Convert.ToInt32(tb_Salary.Text);
+            staff.Role = (string)cb_Role.SelectedValue;
             try
             {
                 staff.Address = tb_Address.Text;
-                staff.CNIC = tb_CNIC.Text;
-                staff.Comment = tb_Comment.Text;
-                staff.JoiningDate = dp_JoiningDate.SelectedDate;
-                staff.LeavingDate = dp_LeavingDate.SelectedDate;
-                staff.PhoneNo = tb_Phone.Text;
+                staff.Phone = tb_Phone.Text;
                 staff.UserName = tb_UserName.Text;
                 staff.Password = tb_Password.Text;
-                staff.DutyStart = Convert.ToInt32(tb_DutyStart.Text);
-                staff.DutyEnd = Convert.ToInt32(tb_DutyStart.Text);      
                 
             } catch { }
-            
-            Staff.insert(staff);
+            Console.WriteLine(staff.Role);
+            //Person.insert(staff);
         
-            Close();
+            //Close();
             new Window_ViewAllStaff().Show();
         }
     }

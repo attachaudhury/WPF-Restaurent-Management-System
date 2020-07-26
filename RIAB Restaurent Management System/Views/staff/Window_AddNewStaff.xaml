@@ -10,7 +10,7 @@
         <Label Content="Name" HorizontalAlignment="Left" Margin="33,36,0,0" VerticalAlignment="Top"/>
         <TextBox Name="tb_Name" HorizontalAlignment="Left" Margin="119,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="279" Height="37"/>
         <Label Content="Category" HorizontalAlignment="Left" Margin="33,109,0,0" VerticalAlignment="Top" Width="71"/>
-        <ComboBox Name="cb_Cat" HorizontalAlignment="Left" Margin="119,102,0,0" VerticalAlignment="Top" Width="279" Height="33"/>
+        <ComboBox SelectedIndex="0" Name="cb_Role" HorizontalAlignment="Left" Margin="119,102,0,0" VerticalAlignment="Top" Width="279" Height="33"/>
         <Label Content="User Name" HorizontalAlignment="Left" Margin="33,174,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="tb_UserName" HorizontalAlignment="Left" Height="29" Margin="119,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="279"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="33,221,0,0" VerticalAlignment="Top"/>

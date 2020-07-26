@@ -47,7 +47,6 @@
                 <MenuItem Header="View Deposits" Click="mi_ViewDeposit"/>
             </MenuItem>
             <MenuItem Header="Staff">
-                <MenuItem Header="Add Staff Category" Click="mi_AddStaffCategory"/>
                 <MenuItem Header="Add Staff" Click="mi_AddStaff"/>
                 <MenuItem Header="View Staff" Click="mi_AllStaff"/>
             </MenuItem>

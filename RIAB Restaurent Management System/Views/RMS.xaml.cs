@@ -11,7 +11,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using RIAB_Restaurent_Management_System.Views.customer;
 using RIAB_Restaurent_Management_System.Views.foodndeals;
 using RIAB_Restaurent_Management_System.Views.finance;
 using RIAB_Restaurent_Management_System.Views.kitchen;
@@ -35,7 +34,7 @@ namespace RIAB_Restaurent_Management_System.Views
 
         private void mi_AddNewCustomer(object sender, RoutedEventArgs e)
         {
-            new Form_AddNewCustomer().Show();
+            new Window_AddNewStaff("customer").Show();
         }
         private void mi_LogOut(object sender, RoutedEventArgs e)
         {
@@ -176,7 +175,7 @@ namespace RIAB_Restaurent_Management_System.Views
 
         private void mi_AddStaff(object sender, RoutedEventArgs e)
         {
-            new Window_AddNewStaff().Show();
+            new Window_AddNewStaff("staff").Show();
         }
 
         private void mi_AllStaff(object sender, RoutedEventArgs e)
@@ -253,11 +252,6 @@ namespace RIAB_Restaurent_Management_System.Views
         private void mi_ViewDeposit(object sender, RoutedEventArgs e)
         {
             new Window_ViewDeposits().Show();
-        }
-
-        private void mi_AddStaffCategory(object sender, RoutedEventArgs e)
-        {
-            new Window_AddStaffCategory().Show();
         }
 
         private void mi_DailySaleReport(object sender, RoutedEventArgs e)

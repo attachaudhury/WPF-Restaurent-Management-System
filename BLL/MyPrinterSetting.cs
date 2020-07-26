@@ -14,17 +14,15 @@ namespace BLL
         public static String Title = Settings1.Default.Title;
         public static String SubTitle = Settings1.Default.SubTitle;
         public static String Footer = Settings1.Default.Footer;
-        public static String Pass = Settings1.Default.Pass;
         public static int Reciptlineheight = Settings1.Default.Reciptlineheight;
 
-        public static void saveSettings(int pageWidth, int magrinLeft,String title,String subTitle,String footer,string pass,int Reciptlineheight)
+        public static void saveSettings(int pageWidth, int magrinLeft,String title,String subTitle,String footer,int Reciptlineheight)
         {
             Settings1.Default.PrinterPageWidth = pageWidth;
             Settings1.Default.PrinterMarginLeft = magrinLeft;
             Settings1.Default.Title = title;
             Settings1.Default.SubTitle = subTitle;
             Settings1.Default.Footer = footer;
-            Settings1.Default.Pass = pass;
             Settings1.Default.Reciptlineheight = Reciptlineheight;
             Settings1.Default.Save();
     }

@@ -3,20 +3,20 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Start System" Height="328.503" Width="509.79" Background="Gray" Opacity="0.9" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label x:Name="lbl_Name" Content="Name" HorizontalAlignment="Left" Margin="81,100,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.657,0.615" FontSize="16"/>
-        <TextBox x:Name="tb_Name" FontSize="14" BorderBrush="White" HorizontalAlignment="Left" Height="43" Margin="163,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="254" ToolTip="Please Enter User Name">
+        <Label x:Name="lbl_Name" Content="Name" HorizontalAlignment="Left" Margin="92,106,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.657,0.615" FontSize="10"/>
+        <TextBox x:Name="tb_Name" Text="admin" FontSize="14"  BorderBrush="#FF494646" HorizontalAlignment="Left" Height="43" Margin="163,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="254" ToolTip="Please Enter User Name" Foreground="#FFD1D1D1">
         </TextBox>
-        <Label x:Name="lbl_Pasword" Content="Password" HorizontalAlignment="Left" Margin="79,151,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.657,0.615" FontSize="16"/>
-        <PasswordBox x:Name="tb_Pasword" KeyDown="PressEnter" BorderBrush="White" HorizontalAlignment="Left" Height="46" Margin="163,133,0,0" VerticalAlignment="Top" Width="254" ToolTip="Please Enter Password">
+        <Label x:Name="lbl_Pasword" Content="Password" HorizontalAlignment="Left" Margin="89,160,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.657,0.615" FontSize="10"/>
+        <PasswordBox x:Name="tb_Pasword" Password="admin@123" KeyDown="PressEnter" BorderBrush="#FF494646" HorizontalAlignment="Left" Height="46" Margin="163,133,0,0" VerticalAlignment="Top" Width="254" ToolTip="Please Enter Password" Foreground="#FFD1D1D1">
 
         </PasswordBox>
-        <Button Click="btn_Login" Content="Login" HorizontalAlignment="Left" Margin="212,206,0,0" VerticalAlignment="Top" Width="108" Height="36" FontSize="14">
+        <Button Click="btn_Login" Content="Login" HorizontalAlignment="Left" Margin="212,206,0,0" VerticalAlignment="Top" Width="108" Height="36" FontSize="10" Background="#FF575555">
 
         </Button>
-        <Button Click="btn_CloseApplication" Content="Close Application" HorizontalAlignment="Left" Margin="194,253,0,0" VerticalAlignment="Top" Width="143" Height="36" FontSize="14" Background="Red" BorderBrush="Red">
+        <Button Click="btn_CloseApplication" Content="Close Application" HorizontalAlignment="Left" Margin="194,253,0,0" VerticalAlignment="Top" Width="143" Height="36" FontSize="10" Background="#FF575555">
         </Button>
-        <Label Content="Food Point" HorizontalAlignment="Left" Margin="189,25,0,0" VerticalAlignment="Top" Width="164" FontFamily="DokChampa" FontSize="24" Foreground="#FF01C5D8"/>
-        <Label Content=" Software Licenced By RIAB. 03024759550 .Release Date 29/5/2018" HorizontalAlignment="Left" Margin="0,302,0,-3" VerticalAlignment="Top" Width="510" Background="#FF807676" Height="30"/>
+        <Label Content="Business Book" HorizontalAlignment="Center" Margin="0,25,0,0" VerticalAlignment="Top" Width="164" FontFamily="DokChampa" FontSize="24" Foreground="#FFDEDEDE"/>
+        <Label Content=" Software Licenced By Ravicosoft. 03024759550 .Release Date 01/6/2020" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,0" FontSize="10" Width="510" Background="#FF363636" Height="25" Foreground="#DDC7C7C7"/>
 
     </Grid>
 

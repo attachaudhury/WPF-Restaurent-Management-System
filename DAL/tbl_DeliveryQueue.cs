@@ -24,5 +24,6 @@ namespace DAL
         public virtual tbl_Customer tbl_Customer { get; set; }
         public virtual tbl_Staff tbl_Staff { get; set; }
         public virtual tbl_FoodItemCategory tbl_FoodItemCategory { get; set; }
+        public virtual tbl_Sale tbl_Sale { get; set; }
     }
 }

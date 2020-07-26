@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Food Point", "RIAB Restaurent Management System\Food Point.csproj", "{DB91D8FE-0DA5-4F07-A7F2-3C96E192D704}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business Book", "RIAB Restaurent Management System\Business Book.csproj", "{DB91D8FE-0DA5-4F07-A7F2-3C96E192D704}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{70D21D1B-9A9B-4DF3-9CD1-A83F1324CD52}"
 EndProject

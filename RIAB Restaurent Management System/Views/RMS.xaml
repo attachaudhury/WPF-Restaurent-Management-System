@@ -65,22 +65,7 @@
             <MenuItem Header="Log Out" Click="mi_LogOut">
             </MenuItem>
         </Menu>
-        <CheckBox x:Name="cbx_Sale" Checked="cbx_Sale_Checked" Unchecked="cbx_Sale_Unchecked" Content="Sale" HorizontalAlignment="Left" Margin="1097,53,0,0" VerticalAlignment="Top" Foreground="#FFFF8484"/>
-        <CheckBox x:Name="cbx_Expences" Checked="cbx_Expences_Checked" Unchecked="cbx_Expences_Unchecked" Content="Expences" HorizontalAlignment="Left" Margin="1164,53,0,0" VerticalAlignment="Top" Foreground="#FFFF7373"/>
-        <Grid x:Name="g_Sale" Visibility="Hidden" Background="#FFAECCFF" HorizontalAlignment="Right" VerticalAlignment="Top" Width="268" Height="98" Margin="0,221,0,0">
-            <Label Content="Today" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="12,6,0,0"/>
-            <Label x:Name="lbl_TodayTotalSale" FontSize="20" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="149,8,0,0"/>
-            <Label Content="This Month" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="8,54,0,0"/>
-            <Label x:Name="lbl_ThisMonthTotalSale" FontSize="20" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="149,52,0,0"/>
-        </Grid>
-        <Grid x:Name="g_Expences" Visibility="Hidden" Background="#FFA4FFAC" HorizontalAlignment="Right" VerticalAlignment="Top" Width="268" Height="98" Margin="0,357,0,0">
-            <Label Content="Today" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,4,0,0"/>
-            <Label x:Name="lbl_TodayTotalExpences" FontSize="20"  Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="147,8,0,0"/>
-            <Label Content="This Month" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="8,52,0,0" Width="114"/>
-            <Label x:Name="lbl_ThisMonthTotalExpences" FontSize="20" Content="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="145,52,0,0"/>
-        </Grid>
-        <Label Name="lbl_Title" Content="Food Sales Point" HorizontalAlignment="Center" VerticalAlignment="Top" Width="425"  FontFamily="DokChampa" FontSize="30" Foreground="#FF41FB85" Background="{x:Null}" Margin="519,239,420,0">
-        </Label>
+        
         <Label FontSize="13" Content="    Software Licenced By RIAB." HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="1364" Background="#FF807676" Foreground="#FFA4A4A4"/>
         <Button Click="btn_Sale" Content="Sale" Background="Chocolate" HorizontalAlignment="Left" Margin="59,186,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Click="btn_dg" Content="DQ" Background="DarkOrchid" HorizontalAlignment="Left" Margin="59,225,0,0" VerticalAlignment="Top" Width="98"/>

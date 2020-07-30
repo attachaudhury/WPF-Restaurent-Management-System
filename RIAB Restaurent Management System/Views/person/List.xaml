@@ -5,16 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RIAB_Restaurent_Management_System.Views.person"
         mc:Ignorable="d"
-        Title="All Staff" Height="440.468" Width="713.167" WindowStartupLocation="CenterScreen">
+        Title="List" Height="504.968" Width="759.667" WindowStartupLocation="CenterScreen">
     <Grid>
-        <DataGrid Name="dg_AllStaff" BorderBrush="Gray" BorderThickness="1" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="330" Margin="21,23,0,0" VerticalAlignment="Top" Width="433">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="178*"/>
+            <ColumnDefinition Width="575*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid Name="dg_AllStaff" BorderBrush="Gray" BorderThickness="1" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="454" Margin="10,10,0,0" VerticalAlignment="Top" Width="732" Grid.ColumnSpan="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
-                <DataGridTextColumn Header="Category" Binding="{Binding tbl_StaffCategory.Name}"/>
-                <DataGridTextColumn Header="Salary" Binding="{Binding Salary}"/>
+                <DataGridTextColumn Header="Role" Binding="{Binding Role}"/>
+                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}"/>
+                <DataGridTextColumn Header="Username" Binding="{Binding UserName}"/>
+                <DataGridTextColumn Header="Password" Binding="{Binding Password}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Click="btn_Delete" Content="Delete"  HorizontalAlignment="Left" Margin="559,157,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>

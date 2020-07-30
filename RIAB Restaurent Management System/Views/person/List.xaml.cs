@@ -24,17 +24,7 @@ namespace RIAB_Restaurent_Management_System.Views.person
         public List(string roletype)
         {
             InitializeComponent();
-            dg_AllStaff.ItemsSource = Staff.getAll();
-        }
-        private void btn_Delete(object sender, RoutedEventArgs e)
-        {
-            if (dg_AllStaff.SelectedItem != null)
-            {
-                tbl_Staff staff = (tbl_Staff)dg_AllStaff.SelectedItem;
-                Staff.delete(staff);
-                dg_AllStaff.ItemsSource = null;
-                dg_AllStaff.ItemsSource = Staff.getAll();
-            }
+            dg_AllStaff.ItemsSource = Person.getAll(roletype);
         }
     }
 }

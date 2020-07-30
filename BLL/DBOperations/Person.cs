@@ -25,5 +25,17 @@ namespace BLL.DBOperations
             db.tbl_Person.Add(user);
             db.SaveChanges();
         }
+        public static List<tbl_Person> getAll(string roletype)
+        {
+            RMSDBEntities db = DBContext.getInstance();
+            if (roletype == "staff")
+            {
+                return db.tbl_Person.Where(a=>a.Role!="customer").ToList();
+            } else
+            {
+                return db.tbl_Person.Where(a => a.Role == "customer").ToList();
+            }
+            
+        }
     }
 }

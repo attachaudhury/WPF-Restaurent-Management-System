@@ -22,15 +22,17 @@ using BLL;
 using BLL.DBOperations;
 using RIAB_Restaurent_Management_System.Views.staff;
 using RIAB_Restaurent_Management_System.Properties;
+using DAL;
 
 namespace RIAB_Restaurent_Management_System.Views
 {
     public partial class RMS : Window
     {
+        tbl_Person loggininuser;
         public RMS()
         {
             InitializeComponent();
-            lbl_Title.Content = MyPrinterSetting.Title;
+            loggininuser= Person.loggedinuser;
         }
 
         private void mi_AddNewCustomer(object sender, RoutedEventArgs e)
@@ -99,32 +101,7 @@ namespace RIAB_Restaurent_Management_System.Views
         {
             new Form_ExpenceReport().Show();
         }
-
-        private void cbx_Sale_Checked(object sender, RoutedEventArgs e)
-        {
-            g_Sale.Visibility = Visibility.Visible;
-            lbl_TodayTotalSale.Content = Sale.getAllTodayAmmount();
-            lbl_ThisMonthTotalSale.Content = Sale.getAllThisMonthAmmount();
-        }
-
-        private void cbx_Sale_Unchecked(object sender, RoutedEventArgs e)
-        {
-            g_Sale.Visibility = Visibility.Hidden;
-        }
-
-        private void cbx_Expences_Checked(object sender, RoutedEventArgs e)
-        {
-            g_Expences.Visibility = Visibility.Visible;
-            lbl_TodayTotalExpences.Content = Expence.getTodayTotalAmmount();
-            lbl_ThisMonthTotalExpences.Content = Expence.getThisMonthTotalAmmount();
-        }
-
-        private void cbx_Expences_Unchecked(object sender, RoutedEventArgs e)
-        {
-            g_Expences.Visibility = Visibility.Hidden;
-        }
         
-
         private void btn_AllDelivery(object sender, RoutedEventArgs e)
         {
             new Form_AllDeliveryQueues().Show();

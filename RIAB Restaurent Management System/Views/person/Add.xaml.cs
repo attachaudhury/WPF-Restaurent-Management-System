@@ -67,11 +67,9 @@ namespace RIAB_Restaurent_Management_System.Views.person
 
             }
             catch { }
-            
-            //Person.insert(staff);
-
-            //Close();
-            //new Window_ViewAllStaff().Show();
+            Person.insert(person);
+            Close();
+            new List("staff").Show();
         }
     }
 }

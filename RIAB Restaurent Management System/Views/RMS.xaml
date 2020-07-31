@@ -50,13 +50,6 @@
                 <MenuItem Header="Add Staff" Click="mi_AddStaff"/>
                 <MenuItem Header="View Staff" Click="mi_AllStaff"/>
             </MenuItem>
-            <MenuItem x:Name="m_Orders" Header="Orders">
-                <MenuItem Header="New Purchase Order" Click="mi_NewPurchaseOrder"/>
-                <MenuItem Header="View Purchase Orders" Click="mi_ViewPurchaseOrder"/>
-            </MenuItem>
-            <MenuItem x:Name="m_SMS" Header="SMS">
-                <MenuItem Header="Send SMS" Click="mi_SendSMS"/>
-            </MenuItem>
             <MenuItem Header="Log Out" Click="mi_LogOut">
             </MenuItem>
         </Menu>

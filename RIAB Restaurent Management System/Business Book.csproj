@@ -145,12 +145,6 @@
     <Compile Include="Views\foodndeals\Form_ManageFoodItems.xaml.cs">
       <DependentUpon>Form_ManageFoodItems.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\order\Window_NewPurchaseOrder.xaml.cs">
-      <DependentUpon>Window_NewPurchaseOrder.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\order\Window_ViewPurchaseOrders.xaml.cs">
-      <DependentUpon>Window_ViewPurchaseOrders.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\others\Form_InputDialog.xaml.cs">
       <DependentUpon>Form_InputDialog.xaml</DependentUpon>
     </Compile>
@@ -196,9 +190,6 @@
     <Compile Include="Views\sale\Form_SaleDetails.xaml.cs">
       <DependentUpon>Form_SaleDetails.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\sale\Window1.xaml.cs">
-      <DependentUpon>Window1.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\sale\Window_DailySaleReport.xaml.cs">
       <DependentUpon>Window_DailySaleReport.xaml</DependentUpon>
     </Compile>
@@ -210,9 +201,6 @@
     </Compile>
     <Compile Include="Views\sale\Window_NewSale.xaml.cs">
       <DependentUpon>Window_NewSale.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views\SMS\Window_SendSMS.xaml.cs">
-      <DependentUpon>Window_SendSMS.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -294,14 +282,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\order\Window_NewPurchaseOrder.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\order\Window_ViewPurchaseOrders.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\others\Form_InputDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -362,10 +342,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\sale\Window1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views\sale\Window_DailySaleReport.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -379,10 +355,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\sale\Window_NewSale.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\SMS\Window_SendSMS.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -442,7 +414,10 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="data\" />
+    <Folder Include="other\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.3.1.3\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.1.3\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

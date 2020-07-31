@@ -3,7 +3,6 @@ using RIAB_Restaurent_Management_System.Views.foodndeals;
 using RIAB_Restaurent_Management_System.Views.finance;
 using RIAB_Restaurent_Management_System.Views.kitchen;
 using RIAB_Restaurent_Management_System.Views.sale;
-using RIAB_Restaurent_Management_System.Views.order;
 using RIAB_Restaurent_Management_System.Views.others;
 using BLL.DBOperations;
 using DAL;
@@ -38,13 +37,10 @@ namespace RIAB_Restaurent_Management_System.Views
             m_NewDepositHead.Visibility = Visibility.Collapsed;
             m_ViewDeposits.Visibility = Visibility.Collapsed;
             m_Staff.Visibility = Visibility.Collapsed;
-            m_Orders.Visibility = Visibility.Collapsed;
-            m_SMS.Visibility = Visibility.Collapsed;
         }
 
         private void mi_AddNewCustomer(object sender, RoutedEventArgs e)
         {
-            //new Window_AddNewStaff("customer").Show();
             new person.Add("customer").Show();
         }
         private void mi_LogOut(object sender, RoutedEventArgs e)
@@ -194,7 +190,7 @@ namespace RIAB_Restaurent_Management_System.Views
 
         private void btn_Sale(object sender, RoutedEventArgs e)
         {
-            new Window1().Show();
+            new Window_NewSale().Show();
         }
 
         private void btn_dg(object sender, RoutedEventArgs e)
@@ -240,16 +236,6 @@ namespace RIAB_Restaurent_Management_System.Views
         private void mi_DailySaleReport(object sender, RoutedEventArgs e)
         {
             new Window_DailySaleReport().Show();
-        }
-
-        private void mi_NewPurchaseOrder(object sender, RoutedEventArgs e)
-        {
-            new Window_NewPurchaseOrder().Show();
-        }
-
-        private void mi_ViewPurchaseOrder(object sender, RoutedEventArgs e)
-        {
-            new Window_ViewPurchaseOrders().Show();
         }
 
         private void mi_NewExpence(object sender, RoutedEventArgs e)

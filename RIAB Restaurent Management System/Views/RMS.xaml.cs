@@ -23,16 +23,28 @@ using BLL.DBOperations;
 using RIAB_Restaurent_Management_System.Views.staff;
 using RIAB_Restaurent_Management_System.Properties;
 using DAL;
+using System.ComponentModel;
 
 namespace RIAB_Restaurent_Management_System.Views
 {
     public partial class RMS : Window
     {
         tbl_Person loggininuser;
+
         public RMS()
         {
+            
             InitializeComponent();
             loggininuser= Person.loggedinuser;
+            if (loggininuser.Role == "admin")
+            {
+                showAdminMenu();
+            }
+
+        }
+        private void showAdminMenu() {
+            m_FoodsnDeals.Visibility = Visibility.Collapsed;
+
         }
 
         private void mi_AddNewCustomer(object sender, RoutedEventArgs e)

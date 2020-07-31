@@ -10,12 +10,12 @@
             <ImageBrush/>
         </Grid.Background>
         <Menu Style="{DynamicResource MaterialDesignMenu}" Background="{DynamicResource PrimaryHueMidBrush}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1364">
-            <MenuItem Style="{DynamicResource MaterialDesignMenuItem}" Header="Customers">
-                <MenuItem Style="{DynamicResource MaterialDesignMenuItem}" Header="Add New Customer" Click="mi_AddNewCustomer"/>
-                <MenuItem Style="{DynamicResource MaterialDesignMenuItem}" Header="View All Customers" Click="mi_ViewAllCustomers"/>
+            <MenuItem Header="Customers">
+                <MenuItem Header="Add New Customer" Click="mi_AddNewCustomer"/>
+                <MenuItem Header="View All Customers" Click="mi_ViewAllCustomers"/>
             </MenuItem>
-            <MenuItem Header="Foods n Deals">
-                <MenuItem Header="Categories" Click="mi_ManageFoodIemCategories"/>
+            <MenuItem x:Name="m_FoodsnDeals" Header="Foods n Deals">
+                <MenuItem  Header="Categories" Click="mi_ManageFoodIemCategories"/>
                 <MenuItem Header="Add Food Item" Click="mi_AddFoodIem"/>
                 <MenuItem Header="All Food Items" Click="mi_ManageFoodIems"/>
                 <MenuItem Header="Add Deal" Click="mi_AddDeal"/>

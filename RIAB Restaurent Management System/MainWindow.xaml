@@ -3,11 +3,9 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Start System" Height="328.503" Width="509.79" Background="Gray" Opacity="0.9" AllowsTransparency="True" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label x:Name="lbl_Name" Content="Name" HorizontalAlignment="Left" Margin="92,106,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.657,0.615" FontSize="10"/>
-        <TextBox x:Name="tb_Name" Text="admin" FontSize="14"  BorderBrush="#FF494646" HorizontalAlignment="Left" Height="43" Margin="163,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="254" ToolTip="Please Enter User Name" Foreground="#FFD1D1D1">
+        <TextBox x:Name="tb_Name" Text="admin" FontSize="12" HorizontalAlignment="Left" Margin="132,85,0,0"  VerticalAlignment="Top" Width="254" ToolTip="Username" BorderBrush="#FF494646" Foreground="#FFD1D1D1">
         </TextBox>
-        <Label x:Name="lbl_Pasword" Content="Password" HorizontalAlignment="Left" Margin="89,160,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.657,0.615" FontSize="10"/>
-        <PasswordBox x:Name="tb_Pasword" Password="admin@123" KeyDown="PressEnter" BorderBrush="#FF494646" HorizontalAlignment="Left" Height="46" Margin="163,133,0,0" VerticalAlignment="Top" Width="254" ToolTip="Please Enter Password" Foreground="#FFD1D1D1">
+        <PasswordBox x:Name="tb_Pasword" Password="admin@123" FontSize="12"  HorizontalAlignment="Left" Margin="132,133,0,0" VerticalAlignment="Top" Width="254" ToolTip="Password" BorderBrush="#FF494646" Foreground="#FFD1D1D1" KeyDown="PressEnter">
 
         </PasswordBox>
         <Button Click="btn_Login" Content="Login" HorizontalAlignment="Left" Margin="212,206,0,0" VerticalAlignment="Top" Width="108" Height="36" FontSize="10" Background="#FF575555">

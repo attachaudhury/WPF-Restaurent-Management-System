@@ -1,29 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 using RIAB_Restaurent_Management_System.Views.foodndeals;
 using RIAB_Restaurent_Management_System.Views.finance;
 using RIAB_Restaurent_Management_System.Views.kitchen;
 using RIAB_Restaurent_Management_System.Views.sale;
 using RIAB_Restaurent_Management_System.Views.order;
 using RIAB_Restaurent_Management_System.Views.others;
-using RIAB_Restaurent_Management_System.Views.person;
-using BLL;
 using BLL.DBOperations;
-using RIAB_Restaurent_Management_System.Views.staff;
-using RIAB_Restaurent_Management_System.Properties;
 using DAL;
-using System.ComponentModel;
 
 namespace RIAB_Restaurent_Management_System.Views
 {
@@ -36,15 +19,27 @@ namespace RIAB_Restaurent_Management_System.Views
             
             InitializeComponent();
             loggininuser= Person.loggedinuser;
-            if (loggininuser.Role == "admin")
+            if (loggininuser.Role != "admin")
             {
-                showAdminMenu();
+                hideAdminMenu();
             }
-
         }
-        private void showAdminMenu() {
+        private void hideAdminMenu() {
             m_FoodsnDeals.Visibility = Visibility.Collapsed;
-
+            m_Sale_AllSales.Visibility = Visibility.Collapsed;
+            m_Sale_DailySaleReport.Visibility = Visibility.Collapsed;
+            m_Sale_SearchSaleByCustomer.Visibility = Visibility.Collapsed;
+            m_Sale_FoodItemSalesReport.Visibility = Visibility.Collapsed;
+            m_Sale_DeliveryBoysReport.Visibility = Visibility.Collapsed;
+            m_Kitchen.Visibility = Visibility.Collapsed;
+            m_NewExpence.Visibility = Visibility.Collapsed;
+            m_ManageExpenceTypes.Visibility = Visibility.Collapsed;
+            m_FinanceReport.Visibility = Visibility.Collapsed;
+            m_NewDepositHead.Visibility = Visibility.Collapsed;
+            m_ViewDeposits.Visibility = Visibility.Collapsed;
+            m_Staff.Visibility = Visibility.Collapsed;
+            m_Orders.Visibility = Visibility.Collapsed;
+            m_SMS.Visibility = Visibility.Collapsed;
         }
 
         private void mi_AddNewCustomer(object sender, RoutedEventArgs e)
@@ -132,11 +127,6 @@ namespace RIAB_Restaurent_Management_System.Views
         private void btn_AddExpence(object sender, RoutedEventArgs e)
         {
             new Form_AddNewExpence().Show();
-        }
-
-        private void mi_AboutSoftware(object sender, RoutedEventArgs e)
-        {
-            new From_AboutSoftware().Show();
         }
 
         private void mi_LinkKitchenInventory(object sender, RoutedEventArgs e)

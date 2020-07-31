@@ -34,10 +34,10 @@
 
         <DataGrid Name="dg_SellingList" BorderBrush="Gray" BorderThickness="1" HorizontalAlignment="Left" Height="229" Margin="459,10,0,0" VerticalAlignment="Top" Width="440">
             <DataGrid.Columns>
-                <materialDesign:MaterialDataGridTextColumn Header="Name" Binding="{Binding Name}"></materialDesign:MaterialDataGridTextColumn>
-                <materialDesign:MaterialDataGridTextColumn Header="Qty" Binding="{Binding Quantity}"></materialDesign:MaterialDataGridTextColumn>
-                <materialDesign:MaterialDataGridTextColumn Header="Price" Binding="{Binding SalePrice}"></materialDesign:MaterialDataGridTextColumn>
-                <materialDesign:MaterialDataGridTextColumn Header="Total" Binding="{Binding Total}"></materialDesign:MaterialDataGridTextColumn>
+                <materialDesign:DataGridTextColumn Header="Name" Binding="{Binding Name}"></materialDesign:DataGridTextColumn>
+                <materialDesign:DataGridTextColumn Header="Qty" Binding="{Binding Quantity}"></materialDesign:DataGridTextColumn>
+                <materialDesign:DataGridTextColumn Header="Price" Binding="{Binding SalePrice}"></materialDesign:DataGridTextColumn>
+                <materialDesign:DataGridTextColumn Header="Total" Binding="{Binding Total}"></materialDesign:DataGridTextColumn>
 
                 <DataGridTemplateColumn Header="Add Qty">
                     <DataGridTemplateColumn.CellTemplate>

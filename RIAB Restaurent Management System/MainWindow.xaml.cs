@@ -54,15 +54,8 @@ namespace RIAB_Restaurent_Management_System
             tbl_Person user = Person.login(tb_Name.Text, tb_Pasword.Password);
             if (user!=null) {
                 Person.loggedinuser = user;
-                if (user.Role == "admin") {
-                    new RMS().Show();
-                    Close();
-                }
-                else
-                {
-                    new User().Show();
-                    Close();
-                }
+                new RMS().Show();
+                Close();
             }
             else
             {

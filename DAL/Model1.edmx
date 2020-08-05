@@ -5,6 +5,30 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="RMSDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DealProduct">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fk_deal_product_dealproduct" Type="int" />
+          <Property Name="fk_product_product_dealproduct" Type="int" />
+          <Property Name="quantity" Type="float" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="barcode" Type="nvarchar" MaxLength="100" />
+          <Property Name="carrycost" Type="float" />
+          <Property Name="discount" Type="float" />
+          <Property Name="name" Type="varchar" MaxLength="100" />
+          <Property Name="purchaseprice" Type="float" />
+          <Property Name="purchaseactive" Type="bit" />
+          <Property Name="quantity" Type="float" />
+          <Property Name="saleprice" Type="float" />
+          <Property Name="saleactive" Type="bit" />
+        </EntityType>
         <EntityType Name="tbl_Customer">
           <Key>
             <PropertyRef Name="Id" />
@@ -465,7 +489,33 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="fk_deal_product_dealproduct">
+          <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+          <End Role="DealProduct" Type="Self.DealProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DealProduct">
+              <PropertyRef Name="fk_deal_product_dealproduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_product_product_dealproduct">
+          <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+          <End Role="DealProduct" Type="Self.DealProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DealProduct">
+              <PropertyRef Name="fk_product_product_dealproduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="RMSDBModelStoreContainer">
+          <EntitySet Name="DealProduct" EntityType="Self.DealProduct" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Customer" EntityType="Self.tbl_Customer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Deal" EntityType="Self.tbl_Deal" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_DealFoodItem" EntityType="Self.tbl_DealFoodItem" Schema="dbo" store:Type="Tables" />
@@ -562,6 +612,14 @@
           <AssociationSet Name="FK__tbl_Staff__Staff__440B1D61" Association="Self.FK__tbl_Staff__Staff__440B1D61">
             <End Role="tbl_StaffCategory" EntitySet="tbl_StaffCategory" />
             <End Role="tbl_Staff" EntitySet="tbl_Staff" />
+          </AssociationSet>
+          <AssociationSet Name="fk_deal_product_dealproduct" Association="Self.fk_deal_product_dealproduct">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="DealProduct" EntitySet="DealProduct" />
+          </AssociationSet>
+          <AssociationSet Name="fk_product_product_dealproduct" Association="Self.fk_product_product_dealproduct">
+            <End Role="Product" EntitySet="Product" />
+            <End Role="DealProduct" EntitySet="DealProduct" />
           </AssociationSet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
@@ -1155,7 +1213,17 @@
             <End Role="tbl_Sale" EntitySet="tbl_Sale" />
             <End Role="tbl_DeliveryQueue" EntitySet="tbl_DeliveryQueue" />
           </AssociationSet>
-        </EntityContainer>
+          <EntitySet Name="DealProducts" EntityType="RMSDBModel.DealProduct" />
+          <EntitySet Name="Products" EntityType="RMSDBModel.Product" />
+          <AssociationSet Name="fk_deal_product_dealproduct" Association="RMSDBModel.fk_deal_product_dealproduct">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="DealProduct" EntitySet="DealProducts" />
+          </AssociationSet>
+          <AssociationSet Name="fk_product_product_dealproduct" Association="RMSDBModel.fk_product_product_dealproduct">
+            <End Role="Product" EntitySet="Products" />
+            <End Role="DealProduct" EntitySet="DealProducts" />
+          </AssociationSet>
+          </EntityContainer>
         <EntityType Name="tbl_Person">
           <Key>
             <PropertyRef Name="Id" />
@@ -1181,7 +1249,59 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        <EntityType Name="DealProduct">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fk_deal_product_dealproduct" Type="Int32" />
+          <Property Name="fk_product_product_dealproduct" Type="Int32" />
+          <Property Name="quantity" Type="Double" />
+          <NavigationProperty Name="Product" Relationship="RMSDBModel.fk_deal_product_dealproduct" FromRole="DealProduct" ToRole="Product" />
+          <NavigationProperty Name="Product1" Relationship="RMSDBModel.fk_product_product_dealproduct" FromRole="DealProduct" ToRole="Product" />
+        </EntityType>
+        <EntityType Name="Product">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="barcode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="carrycost" Type="Double" />
+          <Property Name="discount" Type="Double" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="purchaseprice" Type="Double" />
+          <Property Name="purchaseactive" Type="Boolean" />
+          <Property Name="quantity" Type="Double" />
+          <Property Name="saleprice" Type="Double" />
+          <Property Name="saleactive" Type="Boolean" />
+          <NavigationProperty Name="DealProducts" Relationship="RMSDBModel.fk_deal_product_dealproduct" FromRole="Product" ToRole="DealProduct" />
+          <NavigationProperty Name="DealProducts1" Relationship="RMSDBModel.fk_product_product_dealproduct" FromRole="Product" ToRole="DealProduct" />
+        </EntityType>
+        <Association Name="fk_deal_product_dealproduct">
+          <End Type="RMSDBModel.Product" Role="Product" Multiplicity="0..1" />
+          <End Type="RMSDBModel.DealProduct" Role="DealProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DealProduct">
+              <PropertyRef Name="fk_deal_product_dealproduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_product_product_dealproduct">
+          <End Type="RMSDBModel.Product" Role="Product" Multiplicity="0..1" />
+          <End Type="RMSDBModel.DealProduct" Role="DealProduct" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Product">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DealProduct">
+              <PropertyRef Name="fk_product_product_dealproduct" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -1456,7 +1576,33 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-        </EntityContainerMapping>
+          <EntitySetMapping Name="DealProducts">
+            <EntityTypeMapping TypeName="RMSDBModel.DealProduct">
+              <MappingFragment StoreEntitySet="DealProduct">
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="fk_product_product_dealproduct" ColumnName="fk_product_product_dealproduct" />
+                <ScalarProperty Name="fk_deal_product_dealproduct" ColumnName="fk_deal_product_dealproduct" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Products">
+            <EntityTypeMapping TypeName="RMSDBModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="saleactive" ColumnName="saleactive" />
+                <ScalarProperty Name="saleprice" ColumnName="saleprice" />
+                <ScalarProperty Name="quantity" ColumnName="quantity" />
+                <ScalarProperty Name="purchaseactive" ColumnName="purchaseactive" />
+                <ScalarProperty Name="purchaseprice" ColumnName="purchaseprice" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="discount" ColumnName="discount" />
+                <ScalarProperty Name="carrycost" ColumnName="carrycost" />
+                <ScalarProperty Name="barcode" ColumnName="barcode" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

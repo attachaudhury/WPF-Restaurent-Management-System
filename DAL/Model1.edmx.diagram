@@ -49,7 +49,11 @@
         <AssociationConnector Association="RMSDBModel.FK__tbl_Staff__Staff__300424B4" ManuallyRouted="false" />
         <EntityTypeShape EntityType="RMSDBModel.tbl_Person" Width="1.5" PointX="5.375" PointY="0.75" />
         <AssociationConnector Association="RMSDBModel.FK__tbl_Deliv__Sale___5BE2A6F2" />
-      </Diagram>
+        <EntityTypeShape EntityType="RMSDBModel.DealProduct" Width="1.5" PointX="17.625" PointY="6.625" />
+        <EntityTypeShape EntityType="RMSDBModel.Product" Width="1.5" PointX="15.375" PointY="6" />
+        <AssociationConnector Association="RMSDBModel.fk_deal_product_dealproduct" />
+        <AssociationConnector Association="RMSDBModel.fk_product_product_dealproduct" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

@@ -28,6 +28,7 @@
           <Property Name="quantity" Type="float" />
           <Property Name="saleprice" Type="float" />
           <Property Name="saleactive" Type="bit" />
+          <Property Name="type" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="tbl_Customer">
           <Key>
@@ -1274,6 +1275,7 @@
           <Property Name="quantity" Type="Double" />
           <Property Name="saleprice" Type="Double" />
           <Property Name="saleactive" Type="Boolean" />
+          <Property Name="type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="DealProducts" Relationship="RMSDBModel.fk_deal_product_dealproduct" FromRole="Product" ToRole="DealProduct" />
           <NavigationProperty Name="DealProducts1" Relationship="RMSDBModel.fk_product_product_dealproduct" FromRole="Product" ToRole="DealProduct" />
         </EntityType>
@@ -1589,6 +1591,7 @@
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="RMSDBModel.Product">
               <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="type" ColumnName="type" />
                 <ScalarProperty Name="saleactive" ColumnName="saleactive" />
                 <ScalarProperty Name="saleprice" ColumnName="saleprice" />
                 <ScalarProperty Name="quantity" ColumnName="quantity" />

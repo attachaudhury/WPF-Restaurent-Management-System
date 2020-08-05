@@ -20,6 +20,8 @@
                 <MenuItem Header="All Food Items" Click="mi_ManageFoodIems"/>
                 <MenuItem Header="Add Deal" Click="mi_AddDeal"/>
                 <MenuItem Header="All Deals" Click="mi_ManageDeals"/>
+                <MenuItem Header="Add Product" Click="mi_ProductAdd"/>
+                <MenuItem Header="All Products" Click="mi_ProductList"/>
             </MenuItem>
             <MenuItem Header="Sale">
                 <MenuItem Header="New Sale" Click="mi_NewSale"/>

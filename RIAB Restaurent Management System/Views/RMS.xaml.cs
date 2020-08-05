@@ -6,6 +6,7 @@ using RIAB_Restaurent_Management_System.Views.sale;
 using RIAB_Restaurent_Management_System.Views.others;
 using BLL.DBOperations;
 using DAL;
+using RIAB_Restaurent_Management_System.Views.product;
 
 namespace RIAB_Restaurent_Management_System.Views
 {
@@ -52,6 +53,27 @@ namespace RIAB_Restaurent_Management_System.Views
         {
             Application.Current.Shutdown();
         }
+
+
+        #region Product
+        private void mi_AddFoodIem(object sender, RoutedEventArgs e)
+        {
+            new Form_AddNewFoodItem().Show();
+        }
+
+        private void mi_AddDeal(object sender, RoutedEventArgs e)
+        {
+            new Form_AddANewDeal().Show();
+        }
+        private void mi_ProductAdd(object sender, RoutedEventArgs e)
+        {
+            new ProductAdd().Show();
+        }
+        private void mi_ProductList(object sender, RoutedEventArgs e)
+        {
+            new ProductList().Show();
+        }
+        #endregion Product
 
         private void mi_ViewAllCustomers(object sender, RoutedEventArgs e)
         {
@@ -172,15 +194,7 @@ namespace RIAB_Restaurent_Management_System.Views
             new Window_DeliveryBoysReport().Show();
         }
 
-        private void mi_AddFoodIem(object sender, RoutedEventArgs e)
-        {
-            new Form_AddNewFoodItem().Show();
-        }
-
-        private void mi_AddDeal(object sender, RoutedEventArgs e)
-        {
-            new Form_AddANewDeal().Show();
-        }
+        
         
 
         private void mi_SearchSaleByCustomer(object sender, RoutedEventArgs e)

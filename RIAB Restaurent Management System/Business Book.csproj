@@ -429,6 +429,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bll\" />
     <Folder Include="data\" />
     <Folder Include="other\" />
   </ItemGroup>

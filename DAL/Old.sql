@@ -1,3 +1,4 @@
+
 use master
 go
 drop database RMSDB
@@ -7,16 +8,6 @@ GO
 use RMSDB 
 GO
 
-CREATE TABLE tbl_Person(
-	Id int IDENTITY(0,1) NOT NULL PRIMARY KEY,
-	[Address] varchar(200),
-	[Name] varchar(20),
-	[Password] varchar(20),
-	UserName varchar(20),
-	Phone varchar(30),
-	Phone2 varchar(30),
-	[Role] varchar(20) default 'user'
-)
 
 CREATE TABLE tbl_Sitting(
 	Id int IDENTITY(1,1) NOT NULL PRIMARY KEY,
@@ -57,7 +48,7 @@ CREATE TABLE tbl_DepositHead(
 	Id int IDENTITY(0,1) NOT NULL PRIMARY KEY,
 	[Name] varchar(30))
 
-	
+
 CREATE TABLE tbl_ExpenceHead(
 	Id int IDENTITY(0,1) NOT NULL PRIMARY KEY,
 	Name varchar(50))
@@ -170,30 +161,6 @@ CREATE TABLE tbl_FoodItem(
 	Category_Id int foreign key references tbl_FoodItemCategory(Id))
 
 
-	CREATE TABLE Product(
-	id int IDENTITY(1,1) NOT NULL PRIMARY KEY,
-	barcode nvarchar(100),
-    carrycost float,
-    discount float,
-    name varchar(100),
-    purchaseprice float,
-    purchaseactive bit,
-    quantity float,
-    saleprice float,
-    saleactive bit,
-)
-
-	CREATE TABLE DealProduct(
-	id int IDENTITY(1,1) NOT NULL PRIMARY KEY,
-	fk_deal_product_dealproduct int,
-	constraint fk_deal_product_dealproduct foreign key (fk_deal_product_dealproduct) references Product(Id),
-	fk_product_product_dealproduct int,
-	constraint fk_product_product_dealproduct foreign key (fk_product_product_dealproduct) references Product(Id),
-	quantity float,
-)
-
-
-
 
 CREATE TABLE tbl_Deal(
 	Id int IDENTITY(20001,1) NOT NULL PRIMARY KEY,
@@ -201,8 +168,7 @@ CREATE TABLE tbl_Deal(
 	SalePrice float,
 	ManageInventory bit,
 	Recipe varchar(1000),
-	Category_Id int foreign key references tbl_FoodItemCategory(Id)
-)
+	Category_Id int foreign key references tbl_FoodItemCategory(Id))
 
 
 
@@ -266,4 +232,4 @@ VALUES ('Default');
 
 go
 use master
-go
+go 

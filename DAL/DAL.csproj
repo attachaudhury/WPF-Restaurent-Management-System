@@ -173,7 +173,8 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Content Include="RMS Demo Data.sql" />
+    <Content Include="Old Demo Data.sql" />
+    <Content Include="Old.sql" />
     <Content Include="RMSDB.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

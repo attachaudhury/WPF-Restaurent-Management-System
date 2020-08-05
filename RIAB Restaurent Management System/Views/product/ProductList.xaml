@@ -7,6 +7,20 @@
         mc:Ignorable="d"
         Title="ProductList" Height="450" Width="800">
     <Grid>
-        
+        <DataGrid x:Name="dg_ProductList" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Height="366" Width="772">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding id}"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding name}"/>
+                <DataGridTextColumn Header="Sale Price" Binding="{Binding saleprice}"/>
+                <DataGridTextColumn Header="Purchase Price" Binding="{Binding purchaseprice}"/>
+                <DataGridTextColumn Header="Discount" Binding="{Binding discount}"/>
+                <DataGridTextColumn Header="Carrycost" Binding="{Binding carrycost}"/>
+                <DataGridTextColumn Header="Barcode" Binding="{Binding barcode}"/>
+                <DataGridTextColumn Header="Quantity" Binding="{Binding quantity}"/>
+                <DataGridTextColumn Header="type" Binding="{Binding type}"/>
+                <DataGridTextColumn Header="saleactive" Binding="{Binding saleactive}"/>
+                <DataGridTextColumn Header="purchaseactive" Binding="{Binding purchaseactive}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>

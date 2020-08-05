@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,14 @@ namespace RIAB_Restaurent_Management_System.Views.product
         public ProductList()
         {
             InitializeComponent();
+            initFormOperations();
+        }
+        private void initFormOperations()
+        {
+            RMSDBEntities db = DBContext.getInstance();
+            dg_ProductList.ItemsSource = null;
+            dg_ProductList.ItemsSource = db.Products.ToList();
+            UpdateLayout();
         }
     }
 }

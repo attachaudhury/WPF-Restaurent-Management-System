@@ -175,12 +175,13 @@ CREATE TABLE tbl_FoodItem(
 	barcode nvarchar(100),
     carrycost float,
     discount float,
-    name varchar(100),
+    [name] varchar(100),
     purchaseprice float,
     purchaseactive bit,
     quantity float,
     saleprice float,
     saleactive bit,
+	[type] nvarchar(100), -- eg product deal
 )
 
 	CREATE TABLE DealProduct(

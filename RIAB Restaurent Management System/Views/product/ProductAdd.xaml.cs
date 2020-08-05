@@ -28,14 +28,21 @@ namespace RIAB_Restaurent_Management_System.Views.product
             InitializeComponent();
             initFormOperations();
         }
-        private void btn_SaveFoodItem(object sender, RoutedEventArgs e)
+        private void btn_Save(object sender, RoutedEventArgs e)
         {
-            tbl_FoodItem r = new tbl_FoodItem();
-            r.Name = tb_FoodItemName.Text;
-            r.SalePrice = Convert.ToInt32(tb_FoodSalePrice.Text);
-            r.Category_Id = cateroryid;
-            r.ManageInventory = cbx_ManageInventory.IsChecked.Value;
-            FoodItem.insert(r);
+            Product r = new Product();
+            r.name = tb_name.Text;
+            r.saleprice = Convert.ToInt32(tb_saleprice.Text);
+            r.purchaseprice = Convert.ToInt32(tb_purchaseprice.Text);
+            r.discount = Convert.ToInt32(tb_discount.Text);
+            r.carrycost = Convert.ToInt32(tb_carrycost.Text);
+            r.barcode = tb_barcode.Text;
+            r.quantity = Convert.ToInt32(tb_quantity.Text);
+            r.saleactive = cbx_SaleActive.IsChecked.Value;
+            r.purchaseactive = cbx_PurchaseActive.IsChecked.Value;
+            RMSDBEntities db = DBContext.getInstance();
+            db.Products.Add(r);
+            db.SaveChanges();
             Close();
             new ProductAdd().Show();
         }

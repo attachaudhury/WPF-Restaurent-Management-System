@@ -17,8 +17,8 @@ namespace DAL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tbl_Sale()
         {
-            this.tbl_SaleItem = new HashSet<tbl_SaleItem>();
             this.tbl_DeliveryQueue = new HashSet<tbl_DeliveryQueue>();
+            this.tbl_SaleItem = new HashSet<tbl_SaleItem>();
         }
     
         public int Id { get; set; }
@@ -30,10 +30,10 @@ namespace DAL
         public Nullable<int> Staff_id { get; set; }
     
         public virtual tbl_Customer tbl_Customer { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tbl_DeliveryQueue> tbl_DeliveryQueue { get; set; }
         public virtual tbl_Staff tbl_Staff { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbl_SaleItem> tbl_SaleItem { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tbl_DeliveryQueue> tbl_DeliveryQueue { get; set; }
     }
 }

@@ -1,21 +1,20 @@
 use master
 go
-drop database RMSDB
+drop database bbdb
 go
-CREATE DATABASE RMSDB
+CREATE DATABASE bbdb
 GO
-use RMSDB 
+use bbdb 
 GO
 
-CREATE TABLE tbl_Person(
-	Id int IDENTITY(0,1) NOT NULL PRIMARY KEY,
-	[Address] varchar(200),
-	[Name] varchar(20),
-	[Password] varchar(20),
-	UserName varchar(20),
-	Phone varchar(30),
-	Phone2 varchar(30),
-	[Role] varchar(20) default 'user'
+CREATE TABLE [user](
+	id int IDENTITY(0,1) NOT NULL PRIMARY KEY,
+	[address] varchar(200),
+	[name] varchar(20),
+	[password] varchar(20),
+	username varchar(20),
+	phone varchar(30),
+	[role] varchar(20) default 'user'
 )
 
 CREATE TABLE tbl_Sitting(
@@ -170,7 +169,7 @@ CREATE TABLE tbl_FoodItem(
 	Category_Id int foreign key references tbl_FoodItemCategory(Id))
 
 
-	CREATE TABLE Product(
+	CREATE TABLE product(
 	id int IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	barcode nvarchar(100),
     carrycost float,
@@ -184,7 +183,7 @@ CREATE TABLE tbl_FoodItem(
 	[type] nvarchar(100), -- eg product deal
 )
 
-	CREATE TABLE DealProduct(
+	CREATE TABLE dealproduct(
 	id int IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	fk_deal_product_dealproduct int,
 	constraint fk_deal_product_dealproduct foreign key (fk_deal_product_dealproduct) references Product(Id),
@@ -240,6 +239,7 @@ CREATE TABLE tbl_Deposit(
 
 
 --Must Have Data
+INSERT INTO [user](name,phone,username,password,role) VALUES ('admin','00000000000','admin','admin@123','admin');
 INSERT INTO tbl_Customer(Name,PhoneNo)
 VALUES ('anonymous','00000000000');
 INSERT INTO tbl_KitchenInventoryCategory (Name)

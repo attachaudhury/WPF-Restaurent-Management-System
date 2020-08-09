@@ -7,19 +7,20 @@ using RIAB_Restaurent_Management_System.Views.others;
 using BLL.DBOperations;
 using DAL;
 using RIAB_Restaurent_Management_System.Views.product;
+using RIAB_Restaurent_Management_System.bll;
 
 namespace RIAB_Restaurent_Management_System.Views
 {
     public partial class RMS : Window
     {
-        tbl_Person loggininuser;
+        user loggininuser;
 
         public RMS()
         {
             
             InitializeComponent();
-            loggininuser= Person.loggedinuser;
-            if (loggininuser.Role != "admin")
+            loggininuser= userutils.loggedinuser;
+            if (loggininuser.role != "admin")
             {
                 hideAdminMenu();
             }

@@ -30,7 +30,7 @@ namespace RIAB_Restaurent_Management_System.Views.product
         {
             RMSDBEntities db = DBContext.getInstance();
             dg_ProductList.ItemsSource = null;
-            dg_ProductList.ItemsSource = db.Products.ToList();
+            dg_ProductList.ItemsSource = db.product.ToList();
             UpdateLayout();
         }
     }

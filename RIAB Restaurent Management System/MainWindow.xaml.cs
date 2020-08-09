@@ -17,6 +17,7 @@ using System.Globalization;
 using DAL;
 using BLL;
 using BLL.DBOperations;
+using RIAB_Restaurent_Management_System.bll;
 
 namespace RIAB_Restaurent_Management_System
 {
@@ -51,9 +52,13 @@ namespace RIAB_Restaurent_Management_System
             //char[] monthNameArray = DateTime.Now.ToString("MMM", CultureInfo.InvariantCulture).ToCharArray();
             //char secondCharacterofMonth = monthNameArray[1];
             //string password = nextMonthString + secondCharacterofMonth;
-            tbl_Person user = Person.login(tb_Name.Text, tb_Pasword.Password);
+
+
+
+            RMSDBEntities db = new RMSDBEntities();
+            user user = db.user.Where(a => (a.username == tb_Name.Text && a.password == tb_Pasword.Password)).FirstOrDefault();
             if (user!=null) {
-                Person.loggedinuser = user;
+            userutils.loggedinuser = user;
                 new RMS().Show();
                 Close();
             }

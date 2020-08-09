@@ -12,13 +12,13 @@ namespace DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class Product
+    public partial class product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Product()
+        public product()
         {
-            this.DealProducts = new HashSet<DealProduct>();
-            this.DealProducts1 = new HashSet<DealProduct>();
+            this.dealproduct = new HashSet<dealproduct>();
+            this.dealproduct1 = new HashSet<dealproduct>();
         }
     
         public int id { get; set; }
@@ -34,8 +34,8 @@ namespace DAL
         public string type { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DealProduct> DealProducts { get; set; }
+        public virtual ICollection<dealproduct> dealproduct { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DealProduct> DealProducts1 { get; set; }
+        public virtual ICollection<dealproduct> dealproduct1 { get; set; }
     }
 }

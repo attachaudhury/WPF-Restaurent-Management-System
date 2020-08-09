@@ -12,15 +12,14 @@ namespace DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class tbl_Person
+    public partial class user
     {
-        public int Id { get; set; }
-        public string Address { get; set; }
-        public string Name { get; set; }
-        public string Password { get; set; }
-        public string UserName { get; set; }
-        public string Phone { get; set; }
-        public string Phone2 { get; set; }
-        public string Role { get; set; }
+        public int id { get; set; }
+        public string address { get; set; }
+        public string name { get; set; }
+        public string password { get; set; }
+        public string username { get; set; }
+        public string phone { get; set; }
+        public string role { get; set; }
     }
 }

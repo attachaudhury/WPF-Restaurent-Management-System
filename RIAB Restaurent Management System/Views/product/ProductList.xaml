@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RIAB_Restaurent_Management_System.Views.product"
         mc:Ignorable="d"
-        Title="ProductList" Height="450" Width="800">
+        Title="List" Height="450" Width="800">
     <Grid>
         <DataGrid x:Name="dg_ProductList" AutoGenerateColumns="False" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top" Height="366" Width="772">
             <DataGrid.Columns>

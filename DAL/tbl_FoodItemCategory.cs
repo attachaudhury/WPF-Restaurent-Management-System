@@ -18,7 +18,6 @@ namespace DAL
         public tbl_FoodItemCategory()
         {
             this.tbl_Deal = new HashSet<tbl_Deal>();
-            this.tbl_DeliveryQueue = new HashSet<tbl_DeliveryQueue>();
             this.tbl_FoodItem = new HashSet<tbl_FoodItem>();
         }
     
@@ -27,8 +26,6 @@ namespace DAL
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbl_Deal> tbl_Deal { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tbl_DeliveryQueue> tbl_DeliveryQueue { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbl_FoodItem> tbl_FoodItem { get; set; }
     }

@@ -23,6 +23,7 @@ namespace DAL
     
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Designation { get; set; }
         public string UserName { get; set; }
         public string Password { get; set; }
         public string CNIC { get; set; }
@@ -35,7 +36,6 @@ namespace DAL
         public Nullable<int> DutyEnd { get; set; }
         public string Comment { get; set; }
         public Nullable<int> StaffCategory_Id { get; set; }
-        public string Designation { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbl_DeliveryQueue> tbl_DeliveryQueue { get; set; }

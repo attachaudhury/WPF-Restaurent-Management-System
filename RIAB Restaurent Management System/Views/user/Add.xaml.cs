@@ -1,5 +1,6 @@
 ﻿using BLL.DBOperations;
 using DAL;
+using RIAB_Restaurent_Management_System.bll;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,11 +22,13 @@ namespace RIAB_Restaurent_Management_System.Views.person
     /// </summary>
     public partial class Add : Window
     {
-        tbl_Person loggedinperson;
+        user loggedinperson;
         public Add(string roletype)
         {
             InitializeComponent();
-            loggedinperson = Person.loggedinuser;
+            loggedinperson = userutils.loggedinuser;
+            var db = new RMSDBEntities();
+
             var roles = new string[] { "admin", "user", "customer" };
             if (roletype == "staff")
             {
@@ -55,19 +58,21 @@ namespace RIAB_Restaurent_Management_System.Views.person
                     return;
                 }
             }
-            tbl_Person person = new tbl_Person();
-            person.Name = tb_Name.Text;
-            person.Role = (string)cb_Role.SelectedValue;
+            user person = new user();
+            person.name = tb_Name.Text;
+            person.role = (string)cb_Role.SelectedValue;
             try
             {
-                person.Address = tb_Address.Text;
-                person.Phone = tb_Phone.Text;
-                person.UserName = tb_UserName.Text;
-                person.Password = tb_Password.Text;
+                person.address = tb_Address.Text;
+                person.phone = tb_Phone.Text;
+                person.username = tb_UserName.Text;
+                person.password = tb_Password.Text;
 
             }
             catch { }
-            Person.insert(person);
+            var db = new RMSDBEntities();
+            db.user.Add(person);
+            db.SaveChanges();
             Close();
             new List("staff").Show();
         }

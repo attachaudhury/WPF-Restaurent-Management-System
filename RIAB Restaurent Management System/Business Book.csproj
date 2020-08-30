@@ -395,7 +395,10 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <None Include="other\old software\Release.zip" />
+=======
+>>>>>>> parent of 665907c... hy
 =======
 >>>>>>> parent of 665907c... hy
     <None Include="packages.config" />
@@ -448,6 +451,9 @@
     <Folder Include="bll\" />
     <Folder Include="data\" />
     <Folder Include="other\" />
+<<<<<<< HEAD
+>>>>>>> parent of 665907c... hy
+=======
 >>>>>>> parent of 665907c... hy
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

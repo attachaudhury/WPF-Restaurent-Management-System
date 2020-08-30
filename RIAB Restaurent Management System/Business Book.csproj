@@ -396,7 +396,10 @@
     </EmbeddedResource>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <None Include="other\old software\Release.zip" />
+=======
+>>>>>>> parent of 665907c... hy
 =======
 >>>>>>> parent of 665907c... hy
 =======
@@ -452,6 +455,9 @@
     <Folder Include="data\" />
     <Folder Include="other\" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 665907c... hy
+=======
 >>>>>>> parent of 665907c... hy
 =======
 >>>>>>> parent of 665907c... hy

@@ -203,7 +203,6 @@ CREATE TABLE tbl_Deposit(
 	DatenTime DateTime, 
 	DepositHead_Id int foreign key references tbl_DepositHead(Id))
 
-	go
 
 --Must Have Data
 INSERT INTO tbl_Customer(Name,PhoneNo)

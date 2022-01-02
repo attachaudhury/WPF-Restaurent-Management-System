@@ -1,10 +1,10 @@
 use master
 go
-drop database bbdb
+drop database RMSDB
 go
-CREATE DATABASE bbdb
+CREATE DATABASE RMSDB
 GO
-use bbdb 
+use RMSDB 
 GO
 
 CREATE TABLE [user](

@@ -55,19 +55,19 @@ namespace RIAB_Restaurent_Management_System
 
 
 
-            RMSDBEntities db = new RMSDBEntities();
-            user user = db.user.Where(a => (a.username == tb_Name.Text && a.password == tb_Pasword.Password)).FirstOrDefault();
-            if (user != null)
-            {
-                userutils.loggedinuser = user;
-                new RMS().Show();
-                Close();
-            }
-            else
-            {
-                //BLL.AutoClosingMessageBox.Show("Username or password not exists", "Failed", 3000);
+            //RMSDBEntities db = new RMSDBEntities();
+            //user user = db.user.Where(a => (a.username == tb_Name.Text && a.password == tb_Pasword.Password)).FirstOrDefault();
+            //if (user != null)
+            //{
+            //    userutils.loggedinuser = user;
+            //    new RMS().Show();
+            //    Close();
+            //}
+            //else
+            //{
+            //    //BLL.AutoClosingMessageBox.Show("Username or password not exists", "Failed", 3000);
 
-            }
+            //}
 
             if (tb_Name.Text == "admin")
             {
@@ -78,7 +78,7 @@ namespace RIAB_Restaurent_Management_System
                     //Close();
                     if (DateTime.Now < licenceDate)
                     {
-                        userutils.loggedinuser = new user() { id=1,name="admin",address="address",username="admin",role="admin" };
+                        userutils.loggedinuser = new tbl_Staff() { Id=1,Name="admin" };
                         new RMS().Show();
                         Close();
                     }
@@ -94,7 +94,7 @@ namespace RIAB_Restaurent_Management_System
                     //Close();
                     if (DateTime.Now < licenceDate)
                     {
-                        userutils.loggedinuser = new user() { id = 1, name = "admin", address = "address", username = "admin", role = "admin" };
+                        userutils.loggedinuser =  new tbl_Staff() { Id = 1, Name = "admin" };
                         new RMS().Show();
                         Close();
                     }
@@ -108,7 +108,7 @@ namespace RIAB_Restaurent_Management_System
             {
                 if (tb_Pasword.Password == "12345")
                 {
-                    userutils.loggedinuser = new user() { id = 1, name = "user", address = "address", username = "user", role = "user" };
+                    userutils.loggedinuser = new tbl_Staff() { Id = 1, Name = "user" };
                     new RMS().Show();
                     Close();
                 }

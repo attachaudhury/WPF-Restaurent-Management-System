@@ -208,6 +208,58 @@ namespace RIAB_Restaurent_Management_System.Views.sale
             myBrushes.Add(Brushes.GreenYellow);
             myBrushes.Add(Brushes.RoyalBlue);
 
+            myBrushes.Add(Brushes.LimeGreen);
+            myBrushes.Add(Brushes.Olive);
+            myBrushes.Add(Brushes.DarkViolet);
+            myBrushes.Add(Brushes.BlueViolet);
+            myBrushes.Add(Brushes.Brown);
+            myBrushes.Add(Brushes.Chocolate);
+            myBrushes.Add(Brushes.Magenta);
+            myBrushes.Add(Brushes.Purple);
+            myBrushes.Add(Brushes.Teal);
+            myBrushes.Add(Brushes.DarkGray);
+            myBrushes.Add(Brushes.DarkGreen);
+            myBrushes.Add(Brushes.DarkKhaki);
+            myBrushes.Add(Brushes.DarkOrange);
+            myBrushes.Add(Brushes.DarkRed);
+            myBrushes.Add(Brushes.DarkSeaGreen);
+            myBrushes.Add(Brushes.DarkSlateGray);
+            myBrushes.Add(Brushes.DarkViolet);
+            myBrushes.Add(Brushes.DeepPink);
+            myBrushes.Add(Brushes.DodgerBlue);
+            myBrushes.Add(Brushes.Firebrick);
+            myBrushes.Add(Brushes.ForestGreen);
+            myBrushes.Add(Brushes.Gainsboro);
+            myBrushes.Add(Brushes.Goldenrod);
+            myBrushes.Add(Brushes.GreenYellow);
+            myBrushes.Add(Brushes.RoyalBlue);
+
+            myBrushes.Add(Brushes.LimeGreen);
+            myBrushes.Add(Brushes.Olive);
+            myBrushes.Add(Brushes.DarkViolet);
+            myBrushes.Add(Brushes.BlueViolet);
+            myBrushes.Add(Brushes.Brown);
+            myBrushes.Add(Brushes.Chocolate);
+            myBrushes.Add(Brushes.Magenta);
+            myBrushes.Add(Brushes.Purple);
+            myBrushes.Add(Brushes.Teal);
+            myBrushes.Add(Brushes.DarkGray);
+            myBrushes.Add(Brushes.DarkGreen);
+            myBrushes.Add(Brushes.DarkKhaki);
+            myBrushes.Add(Brushes.DarkOrange);
+            myBrushes.Add(Brushes.DarkRed);
+            myBrushes.Add(Brushes.DarkSeaGreen);
+            myBrushes.Add(Brushes.DarkSlateGray);
+            myBrushes.Add(Brushes.DarkViolet);
+            myBrushes.Add(Brushes.DeepPink);
+            myBrushes.Add(Brushes.DodgerBlue);
+            myBrushes.Add(Brushes.Firebrick);
+            myBrushes.Add(Brushes.ForestGreen);
+            myBrushes.Add(Brushes.Gainsboro);
+            myBrushes.Add(Brushes.Goldenrod);
+            myBrushes.Add(Brushes.GreenYellow);
+            myBrushes.Add(Brushes.RoyalBlue);
+
             int i= 1;
             foreach (ItemOrDealSaleModel item in  mappedListOfDeals)
             {

@@ -48,10 +48,7 @@
                 <MenuItem Header="New Deposit" Click="mi_NewDeposit"/>
                 <MenuItem x:Name="m_ViewDeposits" Header="View Deposits" Click="mi_ViewDeposit"/>
             </MenuItem>
-            <MenuItem x:Name="m_Staff" Header="Staff">
-                <MenuItem Header="Add Staff" Click="mi_AddStaff"/>
-                <MenuItem Header="View Staff" Click="mi_AllStaff"/>
-            </MenuItem>
+           
             <MenuItem Header="Log Out" Click="mi_LogOut">
             </MenuItem>
         </Menu>

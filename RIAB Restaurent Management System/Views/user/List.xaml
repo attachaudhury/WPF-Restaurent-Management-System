@@ -14,10 +14,8 @@
         <DataGrid Name="dg_AllStaff" BorderBrush="Gray" BorderThickness="1" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="454" Margin="10,10,0,0" VerticalAlignment="Top" Width="732" Grid.ColumnSpan="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
-                <DataGridTextColumn Header="Role" Binding="{Binding Role}"/>
                 <DataGridTextColumn Header="Phone" Binding="{Binding Phone}"/>
-                <DataGridTextColumn Header="Username" Binding="{Binding UserName}"/>
-                <DataGridTextColumn Header="Password" Binding="{Binding Password}"/>
+                <DataGridTextColumn Header="Username" Binding="{Binding Address}"/>
             </DataGrid.Columns>
         </DataGrid>
 

@@ -261,18 +261,6 @@
           <Property Name="Address" Type="varchar" MaxLength="50" />
           <Property Name="Balance" Type="float" />
         </EntityType>
-        <EntityType Name="user">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="address" Type="varchar" MaxLength="200" />
-          <Property Name="name" Type="varchar" MaxLength="20" />
-          <Property Name="password" Type="varchar" MaxLength="20" />
-          <Property Name="username" Type="varchar" MaxLength="20" />
-          <Property Name="phone" Type="varchar" MaxLength="30" />
-          <Property Name="role" Type="varchar" MaxLength="20" />
-        </EntityType>
         <Association Name="FK__tbl_Deal__Catego__5AEE82B9">
           <End Role="tbl_FoodItemCategory" Type="Self.tbl_FoodItemCategory" Multiplicity="0..1" />
           <End Role="tbl_Deal" Type="Self.tbl_Deal" Multiplicity="*" />
@@ -540,7 +528,6 @@
           <EntitySet Name="tbl_Staff" EntityType="Self.tbl_Staff" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_StaffCategory" EntityType="Self.tbl_StaffCategory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_Supplier" EntityType="Self.tbl_Supplier" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK__tbl_Deal__Catego__5AEE82B9" Association="Self.FK__tbl_Deal__Catego__5AEE82B9">
             <End Role="tbl_FoodItemCategory" EntitySet="tbl_FoodItemCategory" />
             <End Role="tbl_Deal" EntitySet="tbl_Deal" />
@@ -725,7 +712,6 @@
           </AssociationSet>
           <EntitySet Name="dealproduct" EntityType="RMSDBModel.dealproduct" />
           <EntitySet Name="product" EntityType="RMSDBModel.product" />
-          <EntitySet Name="user" EntityType="RMSDBModel.user" />
           <AssociationSet Name="fk_deal_product_dealproduct" Association="RMSDBModel.fk_deal_product_dealproduct">
             <End Role="product" EntitySet="product" />
             <End Role="dealproduct" EntitySet="dealproduct" />
@@ -1247,18 +1233,6 @@
           <NavigationProperty Name="dealproduct" Relationship="RMSDBModel.fk_deal_product_dealproduct" FromRole="product" ToRole="dealproduct" />
           <NavigationProperty Name="dealproduct1" Relationship="RMSDBModel.fk_product_product_dealproduct" FromRole="product" ToRole="dealproduct" />
         </EntityType>
-        <EntityType Name="user">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="address" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-          <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="phone" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="role" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-        </EntityType>
         <Association Name="fk_deal_product_dealproduct">
           <End Type="RMSDBModel.product" Role="product" Multiplicity="0..1" />
           <End Type="RMSDBModel.dealproduct" Role="dealproduct" Multiplicity="*" />
@@ -1567,19 +1541,6 @@
                 <ScalarProperty Name="discount" ColumnName="discount" />
                 <ScalarProperty Name="carrycost" ColumnName="carrycost" />
                 <ScalarProperty Name="barcode" ColumnName="barcode" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="user">
-            <EntityTypeMapping TypeName="RMSDBModel.user">
-              <MappingFragment StoreEntitySet="user">
-                <ScalarProperty Name="role" ColumnName="role" />
-                <ScalarProperty Name="phone" ColumnName="phone" />
-                <ScalarProperty Name="username" ColumnName="username" />
-                <ScalarProperty Name="password" ColumnName="password" />
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="address" ColumnName="address" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

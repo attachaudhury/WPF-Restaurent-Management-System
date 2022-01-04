@@ -7,16 +7,6 @@ GO
 use RMSDB 
 GO
 
-CREATE TABLE [user](
-	id int IDENTITY(0,1) NOT NULL PRIMARY KEY,
-	[address] varchar(200),
-	[name] varchar(20),
-	[password] varchar(20),
-	username varchar(20),
-	phone varchar(30),
-	[role] varchar(20) default 'user'
-)
-
 CREATE TABLE tbl_Sitting(
 	Id int IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	Name varchar(20),
@@ -239,7 +229,6 @@ CREATE TABLE tbl_Deposit(
 
 
 --Must Have Data
-INSERT INTO [user](name,phone,username,password,role) VALUES ('admin','00000000000','admin','admin@123','admin');
 INSERT INTO tbl_Customer(Name,PhoneNo)
 VALUES ('anonymous','00000000000');
 INSERT INTO tbl_KitchenInventoryCategory (Name)

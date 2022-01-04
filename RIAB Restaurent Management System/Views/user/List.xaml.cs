@@ -25,6 +25,7 @@ namespace RIAB_Restaurent_Management_System.Views.person
         {
             InitializeComponent();
             var db = new RMSDBEntities();
+            
                 dg_AllStaff.ItemsSource = db.tbl_Customer.ToList();
         }
     }

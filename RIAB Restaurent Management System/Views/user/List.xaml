@@ -5,17 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RIAB_Restaurent_Management_System.Views.person"
         mc:Ignorable="d"
-        Title="List" Height="504.968" Width="759.667" WindowStartupLocation="CenterScreen">
+        Title="List" Height="798.865" Width="1416.927" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="178*"/>
             <ColumnDefinition Width="575*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid Name="dg_AllStaff" BorderBrush="Gray" BorderThickness="1" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="454" Margin="10,10,0,0" VerticalAlignment="Top" Width="732" Grid.ColumnSpan="2">
+        <DataGrid Name="dg_AllStaff" BorderBrush="Gray" BorderThickness="1" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="721" Margin="10,10,0,0" VerticalAlignment="Top" Width="1389" Grid.ColumnSpan="2">
             <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding Id}"/>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
-                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}"/>
-                <DataGridTextColumn Header="Username" Binding="{Binding Address}"/>
+                <DataGridTextColumn Header="Phone" Binding="{Binding PhoneNo}"/>
+                <DataGridTextColumn Header="Address" Binding="{Binding Address}"/>
             </DataGrid.Columns>
         </DataGrid>
 

@@ -48,6 +48,9 @@
                 <MenuItem Header="New Deposit" Click="mi_NewDeposit"/>
                 <MenuItem x:Name="m_ViewDeposits" Header="View Deposits" Click="mi_ViewDeposit"/>
             </MenuItem>
+            <MenuItem Header="Others">
+                <MenuItem x:Name="m_Setting" Header="Setting" Click="mi_Setting"/>
+            </MenuItem>
            
             <MenuItem Header="Log Out" Click="mi_LogOut">
             </MenuItem>

@@ -38,6 +38,7 @@ namespace RIAB_Restaurent_Management_System.Views
             m_FinanceReport.Visibility = Visibility.Collapsed;
             m_NewDepositHead.Visibility = Visibility.Collapsed;
             m_ViewDeposits.Visibility = Visibility.Collapsed;
+            m_Setting.Visibility = Visibility.Collapsed;
         }
 
         private void mi_AddNewCustomer(object sender, RoutedEventArgs e)

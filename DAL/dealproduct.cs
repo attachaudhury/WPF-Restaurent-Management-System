@@ -12,14 +12,14 @@ namespace DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class user
+    public partial class dealproduct
     {
         public int id { get; set; }
-        public string address { get; set; }
-        public string name { get; set; }
-        public string password { get; set; }
-        public string username { get; set; }
-        public string phone { get; set; }
-        public string role { get; set; }
+        public Nullable<int> fk_deal_product_dealproduct { get; set; }
+        public Nullable<int> fk_product_product_dealproduct { get; set; }
+        public Nullable<double> quantity { get; set; }
+    
+        public virtual product product { get; set; }
+        public virtual product product1 { get; set; }
     }
 }

@@ -21,18 +21,12 @@ namespace RIAB_Restaurent_Management_System.Views.person
     /// </summary>
     public partial class List : Window
     {
-        public List(string roletype)
+        public List()
         {
             InitializeComponent();
             var db = new RMSDBEntities();
-            if (roletype == "staff")
-            {
-                dg_AllStaff.ItemsSource = db.user.Where(a => a.role != "customer").ToList();
-            }
-            else
-            {
-                dg_AllStaff.ItemsSource = db.user.Where(a => a.role == "customer").ToList();
-            }
+            
+                dg_AllStaff.ItemsSource = db.tbl_Customer.ToList();
         }
     }
 }

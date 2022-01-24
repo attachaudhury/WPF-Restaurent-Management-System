@@ -394,7 +394,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="other\old software\Release.zip" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -421,8 +420,6 @@
   <ItemGroup>
     <Content Include="data\RMSDB.sql" />
     <Content Include="media\2.wav" />
-    <Content Include="other\old software\Old Demo Data.sql" />
-    <Content Include="other\old software\Old.sql" />
     <Resource Include="media\restaurant3.jpg" />
     <Resource Include="media\restaurant2.jpg" />
     <Resource Include="media\restaurant.jpg" />

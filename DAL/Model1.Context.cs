@@ -51,6 +51,5 @@ namespace DAL
         public virtual DbSet<tbl_Supplier> tbl_Supplier { get; set; }
         public virtual DbSet<dealproduct> dealproduct { get; set; }
         public virtual DbSet<product> product { get; set; }
-        public virtual DbSet<user> user { get; set; }
     }
 }

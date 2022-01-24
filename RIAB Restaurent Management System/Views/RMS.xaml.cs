@@ -13,14 +13,14 @@ namespace RIAB_Restaurent_Management_System.Views
 {
     public partial class RMS : Window
     {
-        user loggininuser;
+        tbl_Staff loggininuser;
 
         public RMS()
         {
             
             InitializeComponent();
             loggininuser= userutils.loggedinuser;
-            if (loggininuser.role != "admin")
+            if (loggininuser.Name != "admin")
             {
                 hideAdminMenu();
             }
@@ -38,12 +38,12 @@ namespace RIAB_Restaurent_Management_System.Views
             m_FinanceReport.Visibility = Visibility.Collapsed;
             m_NewDepositHead.Visibility = Visibility.Collapsed;
             m_ViewDeposits.Visibility = Visibility.Collapsed;
-            m_Staff.Visibility = Visibility.Collapsed;
+            m_Setting.Visibility = Visibility.Collapsed;
         }
 
         private void mi_AddNewCustomer(object sender, RoutedEventArgs e)
         {
-            new person.Add("customer").Show();
+            new person.Add().Show();
         }
         private void mi_LogOut(object sender, RoutedEventArgs e)
         {
@@ -78,7 +78,7 @@ namespace RIAB_Restaurent_Management_System.Views
 
         private void mi_ViewAllCustomers(object sender, RoutedEventArgs e)
         {
-            new person.List("customer").Show();
+            new person.List().Show();
         }
 
         private void mi_ManageFoodIemCategories(object sender, RoutedEventArgs e)
@@ -173,17 +173,7 @@ namespace RIAB_Restaurent_Management_System.Views
 
         }
 
-        private void mi_AddStaff(object sender, RoutedEventArgs e)
-        {
-            //new Window_AddNewStaff("staff").Show();
-            new person.Add("staff").Show();
-        }
-
-        private void mi_AllStaff(object sender, RoutedEventArgs e)
-        {
-            //new Window_ViewAllStaff().Show();
-            new person.List("staff").Show();
-        }
+        
 
         private void mi_FoodItemSalesReport(object sender, RoutedEventArgs e)
         {
@@ -230,7 +220,7 @@ namespace RIAB_Restaurent_Management_System.Views
 
         private void btn_Customer(object sender, RoutedEventArgs e)
         {
-            new person.Add("customer").Show();
+            new person.Add().Show();
         }
 
         private void mi_NewDepositHead(object sender, RoutedEventArgs e)

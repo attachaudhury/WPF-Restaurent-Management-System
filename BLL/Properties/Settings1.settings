@@ -20,5 +20,8 @@
     <Setting Name="Reciptlineheight" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">5</Value>
     </Setting>
+    <Setting Name="AdminPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">123456</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -7,19 +7,21 @@
         mc:Ignorable="d"
         Title="Setting" Height="670.31" Width="779.409" WindowStartupLocation="CenterScreen">
     <Grid>
-        <Label Content="Printer" HorizontalAlignment="Left" Margin="22,10,0,0" VerticalAlignment="Top"/>
-        <Label Content="Page Width" HorizontalAlignment="Left" Margin="21,67,0,0" VerticalAlignment="Top" Height="38"/>
-        <TextBox  Name="tb_PageWidth" HorizontalAlignment="Left" Height="34" Margin="101,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="117"/>
-        <Label Content="Title" HorizontalAlignment="Left" Margin="79,167,0,0" VerticalAlignment="Top" Height="37"/>
-        <TextBox Name="tb_Title" HorizontalAlignment="Left" Height="64" Margin="155,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="534"/>
-        <Label Content="Sub Title" HorizontalAlignment="Left" Margin="79,254,0,0" VerticalAlignment="Top" Height="37"/>
-        <TextBox Name="tb_SubTitle" HorizontalAlignment="Left" Height="63" Margin="155,212,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="534"/>
-        <Label Content="Footer" HorizontalAlignment="Left" Margin="79,335,0,0" VerticalAlignment="Top" Height="38"/>
-        <TextBox Name="tb_Footer" HorizontalAlignment="Left" Height="68" Margin="155,295,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="534"/>
+        <Label Content="Settings" FontSize="22" HorizontalAlignment="Left" Margin="55,10,0,0" VerticalAlignment="Top"/>
+        <Label Content="Page Width" HorizontalAlignment="Left" Margin="55,69,0,0" VerticalAlignment="Top" Height="38"/>
+        <TextBox  Name="tb_PageWidth" HorizontalAlignment="Left" Height="34" Margin="165,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="45"/>
         <Label Content="Margin Left" HorizontalAlignment="Left" Margin="241,69,0,0" VerticalAlignment="Top" Height="37"/>
-        <TextBox Name="tb_MarginLeft" HorizontalAlignment="Left" Height="33" Margin="317,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="117"/>
+        <TextBox Name="tb_MarginLeft" HorizontalAlignment="Left" Height="33" Margin="333,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="55"/>
+        <Label Content="Admin Pass" HorizontalAlignment="Left" Margin="515,69,0,0" VerticalAlignment="Top" Height="37"/>
+        <TextBox Name="tb_AdminPassword" HorizontalAlignment="Left" Height="33" Margin="589,63,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="103"/>
+        <Label Content="Title" HorizontalAlignment="Left" Margin="55,172,0,0" VerticalAlignment="Top" Height="37"/>
+        <TextBox Name="tb_Title" HorizontalAlignment="Left" Height="64" Margin="155,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="534"/>
+        <Label Content="Sub Title" HorizontalAlignment="Left" Margin="55,258,0,0" VerticalAlignment="Top" Height="37"/>
+        <TextBox Name="tb_SubTitle" HorizontalAlignment="Left" Height="63" Margin="155,212,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="534"/>
+        <Label Content="Footer" HorizontalAlignment="Left" Margin="55,325,0,0" VerticalAlignment="Top" Height="38"/>
+        <TextBox Name="tb_Footer" HorizontalAlignment="Left" Height="68" Margin="155,295,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="534"/>
         <Button Content="Save" Click="btn_Save" Background="Green" BorderBrush="DarkGreen" HorizontalAlignment="Left" Margin="280,523,0,0" VerticalAlignment="Top" Width="203" Height="39"/>
-        <Label Content="Line Height" HorizontalAlignment="Left" Margin="79,433,0,0" VerticalAlignment="Top" Height="38"/>
+        <Label Content="Line Height" HorizontalAlignment="Left" Margin="49,444,0,0" VerticalAlignment="Top" Height="38"/>
         <TextBox x:Name="tb_Reciptlineheight" HorizontalAlignment="Left" Height="68" Margin="155,393,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="534"/>
 
     </Grid>

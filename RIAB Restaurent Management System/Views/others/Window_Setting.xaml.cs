@@ -26,6 +26,7 @@ namespace RIAB_Restaurent_Management_System.Views.others
             InitializeComponent();
             tb_PageWidth.Text = Convert.ToString(MyPrinterSetting.pageWidth) ;
             tb_MarginLeft.Text = Convert.ToString(MyPrinterSetting.marginLeft);
+            tb_AdminPassword.Text = MyPrinterSetting.AdminPassword;
             tb_Title.Text = MyPrinterSetting.Title;
             tb_SubTitle.Text = MyPrinterSetting.SubTitle;
             tb_Footer.Text = MyPrinterSetting.Footer;
@@ -39,10 +40,11 @@ namespace RIAB_Restaurent_Management_System.Views.others
                 int pageWidth = Convert.ToInt32(tb_PageWidth.Text);
                 int marginLeft = Convert.ToInt32(tb_MarginLeft.Text);
                 string title = tb_Title.Text;
+                string adminPassword = tb_AdminPassword.Text;
                 string subTitle = tb_SubTitle.Text;
                 string footer = tb_Footer.Text;
                 int Reciptlineheight = Convert.ToInt32(tb_Reciptlineheight.Text);
-                MyPrinterSetting.saveSettings(pageWidth, marginLeft, title, subTitle, footer, Reciptlineheight);
+                MyPrinterSetting.saveSettings(pageWidth, marginLeft, adminPassword, title, subTitle, footer, Reciptlineheight);
                 AutoClosingMessageBox.Show("Setting Saved","Success",2000);
                 
             }

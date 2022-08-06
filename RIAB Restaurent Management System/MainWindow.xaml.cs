@@ -72,7 +72,7 @@ namespace RIAB_Restaurent_Management_System
             if (tb_Name.Text == "admin")
             {
                 DateTime licenceDate = new DateTime(2030, 3, 1);
-                if (tb_Pasword.Password == "123456")
+                if (tb_Pasword.Password == MyPrinterSetting.AdminPassword)
                 {
                     //new RMS().Show();
                     //Close();

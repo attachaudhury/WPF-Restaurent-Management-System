@@ -3,13 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Business Book" Height="695" Width="1371.5" WindowState="Maximized">
     <Window.Background>
-        <ImageBrush ImageSource="/RIAB Restaurent Management System;component/media/restaurant3.jpg"/>
+        <ImageBrush ImageSource="/RIAB Restaurent Management System;component/media/restaurant4.jpg" Stretch="UniformToFill" Opacity="0.7"/>
     </Window.Background>
     <Grid>
         <Grid.Background>
             <ImageBrush/>
         </Grid.Background>
-        <Menu Background="#FF363636" Foreground="#DDC7C7C7" VerticalAlignment="Top" HorizontalAlignment="Left" Width="1364">
+        <Menu Background="#FF363636" Foreground="#DDC7C7C7" VerticalAlignment="Top" Margin="0,0,0,0">
             <MenuItem  Header="Customers">
                 <MenuItem Header="Add New Customer" Click="mi_AddNewCustomer"/>
                 <MenuItem Header="View All Customers" Click="mi_ViewAllCustomers"/>
@@ -56,10 +56,14 @@
             </MenuItem>
         </Menu>
 
-        <Label Content=" Software Licenced By Ravicosoft. 03024759550 .Release Date 01/09/2020" HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontSize="12" Width="1364" Background="#FF363636" Height="25" Foreground="#DDC7C7C7"/>
-        <Button Click="btn_Sale" Content="Sale" Background="Chocolate" HorizontalAlignment="Left" Margin="59,228,0,0" VerticalAlignment="Top" Width="183"/>
-        <Button Click="btn_Expence" Content="Expence" Background="DodgerBlue" HorizontalAlignment="Left" Margin="59,265,0,0" VerticalAlignment="Top" Width="183"/>
-        <Button Click="btn_Customer" Content="Customer" Background="Red" HorizontalAlignment="Left" Margin="59,302,0,0" VerticalAlignment="Top" Width="183"/>
+        <Button Click="btn_Sale" Content="Sale" Background="#FF4285F4" HorizontalAlignment="Left" Margin="59,209,0,0" VerticalAlignment="Top" Width="183"/>
+        <Button Click="btn_DeliveryQueue" Content="DQ" Background="#FFDB4437" HorizontalAlignment="Left" Margin="59,249,0,0" VerticalAlignment="Top" Width="183"/>
+        <Button Click="btn_Customer" Content="Customer" Background="#FFF4B400" HorizontalAlignment="Left" Margin="59,289,0,0" VerticalAlignment="Top" Width="183"/>
+        <Button Click="btn_Deal" Content="Deal" Background="#FF0F9D58" HorizontalAlignment="Left" Margin="59,330,0,0" VerticalAlignment="Top" Width="183"/>
+        <Button Click="btn_FoodItem" Content="Food Items" Background="#6350C7" HorizontalAlignment="Left" Margin="59,371,0,0" VerticalAlignment="Top" Width="183"/>
+        <Button Click="btn_Expence" Content="Expence" Background="#AFC750" HorizontalAlignment="Left" Margin="59,411,0,0" VerticalAlignment="Top" Width="183"/>
+        
+        <Label Content=" Software Licenced By Ravicosoft. 03024759550 ." HorizontalAlignment="Center" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" Margin="0,0,0,0" FontSize="12" Width="1364" Background="#FF363636" Height="25" Foreground="#DDC7C7C7"/>
     </Grid>
 
 </Window>

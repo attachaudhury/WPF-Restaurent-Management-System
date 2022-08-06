@@ -420,6 +420,7 @@
   <ItemGroup>
     <Content Include="data\RMSDB.sql" />
     <Content Include="media\2.wav" />
+    <Resource Include="media\restaurant4.jpg" />
     <Resource Include="media\restaurant3.jpg" />
     <Resource Include="media\restaurant2.jpg" />
     <Resource Include="media\restaurant.jpg" />

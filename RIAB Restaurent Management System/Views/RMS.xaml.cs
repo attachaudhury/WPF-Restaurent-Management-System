@@ -41,22 +41,22 @@ namespace RIAB_Restaurent_Management_System.Views
             m_Setting.Visibility = Visibility.Collapsed;
         }
 
+        #region customers
         private void mi_AddNewCustomer(object sender, RoutedEventArgs e)
         {
             new person.Add().Show();
         }
-        private void mi_LogOut(object sender, RoutedEventArgs e)
+        private void mi_ViewAllCustomers(object sender, RoutedEventArgs e)
         {
-            new MainWindow().Show();
-            Close();
-        }
-        private void mi_CloseApplication(object sender, RoutedEventArgs e)
-        {
-            Application.Current.Shutdown();
+            new person.List().Show();
         }
 
+        #endregion
 
-        #region Product
+
+        #region Food and Deals
+
+        
         private void mi_AddFoodIem(object sender, RoutedEventArgs e)
         {
             new Form_AddNewFoodItem().Show();
@@ -74,13 +74,9 @@ namespace RIAB_Restaurent_Management_System.Views
         {
             new ProductList().Show();
         }
-        #endregion Product
+        
 
-        private void mi_ViewAllCustomers(object sender, RoutedEventArgs e)
-        {
-            new person.List().Show();
-        }
-
+        
         private void mi_ManageFoodIemCategories(object sender, RoutedEventArgs e)
         {
             new Form_ManageFoodItemCatogories().Show();
@@ -95,24 +91,14 @@ namespace RIAB_Restaurent_Management_System.Views
         {
             new Form_ManageDeals().Show();
         }
+        #endregion
 
-        private void mi_ManageKitchenCategories(object sender, RoutedEventArgs e)
-        {
-            new Form_ManageKitchenInventoryCategories().Show();
-        }
 
-        private void mi_ManageKitchenInventory(object sender, RoutedEventArgs e)
-        {
-            new Form_ManageKitchenInventory().Show();
-        }
-
+        #region Sale
         private void mi_NewSale(object sender, RoutedEventArgs e)
         {
             new Window_NewSale().Show();
         }
-
-  
-
         private void mi_DeliveryQueue(object sender, RoutedEventArgs e)
         {
             new Form_AllDeliveryQueues().Show();
@@ -132,25 +118,19 @@ namespace RIAB_Restaurent_Management_System.Views
         {
             new Form_AllDeliveryQueues().Show();
         }
-
+        
         private void mi_AllSales(object sender, RoutedEventArgs e)
         {
             new Form_AllSales().Show();
         }
+        #endregion
 
-        private void btn_InstantInventoryManager(object sender, RoutedEventArgs e)
-        {
-            new Form_InstantKitchenInventoryManager().Show();
-        }
+
+        #region Finance
 
         private void btn_AddExpence(object sender, RoutedEventArgs e)
         {
             new Form_AddNewExpence().Show();
-        }
-
-        private void mi_LinkKitchenInventory(object sender, RoutedEventArgs e)
-        {
-            new Form_LinkKitchenInventory().Show();
         }
 
         private void mi_CashInHand(object sender, RoutedEventArgs e)
@@ -168,12 +148,6 @@ namespace RIAB_Restaurent_Management_System.Views
             new Window_Setting().Show();
         }
 
-        private void mi_SendSMS(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        
 
         private void mi_FoodItemSalesReport(object sender, RoutedEventArgs e)
         {
@@ -185,44 +159,14 @@ namespace RIAB_Restaurent_Management_System.Views
             new Window_DeliveryBoysReport().Show();
         }
 
-        
-        
-
         private void mi_SearchSaleByCustomer(object sender, RoutedEventArgs e)
         {
             new Form_FindSaleByCustomer().Show();
         }
 
-        private void btn_Sale(object sender, RoutedEventArgs e)
-        {
-            new Window_NewSale().Show();
-        }
-
-        private void btn_dg(object sender, RoutedEventArgs e)
-        {
-            new Form_AllDeliveryQueues().Show();
-        }
-
-        private void btn_Expence(object sender, RoutedEventArgs e)
-        {
-            new Form_AddNewExpence().Show();
-        }
-
-        private void btn_FoodItem(object sender, RoutedEventArgs e)
-        {
-            new Form_AddNewFoodItem().Show();
-        }
-
-        private void btn_Deal(object sender, RoutedEventArgs e)
-        {
-            new Form_AddANewDeal().Show();
-        }
-
-        private void btn_Customer(object sender, RoutedEventArgs e)
-        {
-            new person.Add().Show();
-        }
-
+        
+        
+        
         private void mi_NewDepositHead(object sender, RoutedEventArgs e)
         {
             new Window_NewDepositHead().Show();
@@ -247,5 +191,73 @@ namespace RIAB_Restaurent_Management_System.Views
         {
             new Form_AddNewExpence().Show();
         }
+        #endregion
+
+
+        #region kitchen
+        private void btn_InstantInventoryManager(object sender, RoutedEventArgs e)
+        {
+            new Form_InstantKitchenInventoryManager().Show();
+        }
+       
+        private void mi_LinkKitchenInventory(object sender, RoutedEventArgs e)
+        {
+            new Form_LinkKitchenInventory().Show();
+        }
+        
+        private void mi_ManageKitchenCategories(object sender, RoutedEventArgs e)
+        {
+            new Form_ManageKitchenInventoryCategories().Show();
+        }
+
+        private void mi_ManageKitchenInventory(object sender, RoutedEventArgs e)
+        {
+            new Form_ManageKitchenInventory().Show();
+        }
+        #endregion
+
+        private void mi_LogOut(object sender, RoutedEventArgs e)
+        {
+            new MainWindow().Show();
+            Close();
+        }
+        private void mi_CloseApplication(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+
+        #region buttons
+        private void btn_Sale(object sender, RoutedEventArgs e)
+        {
+            new Window_NewSale().Show();
+        }
+
+        private void btn_DeliveryQueue(object sender, RoutedEventArgs e)
+        {
+            new Form_AllDeliveryQueues().Show();
+        }
+
+        private void btn_Customer(object sender, RoutedEventArgs e)
+        {
+            new person.Add().Show();
+        }
+
+        private void btn_FoodItem(object sender, RoutedEventArgs e)
+        {
+            new Form_AddNewFoodItem().Show();
+        }
+
+        private void btn_Deal(object sender, RoutedEventArgs e)
+        {
+            new Form_AddANewDeal().Show();
+        }
+
+        private void btn_Expence(object sender, RoutedEventArgs e)
+        {
+            new Form_AddNewExpence().Show();
+        }
+
+        #endregion
     }
 }

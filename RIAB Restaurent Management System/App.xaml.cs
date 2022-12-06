@@ -13,10 +13,12 @@ namespace RIAB_Restaurent_Management_System
         private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
         {
             String innerMessage = "Error: \r\n";
-            innerMessage += e.Exception.StackTrace.Substring(0,600);
-            innerMessage += "\r\n";
-            innerMessage += "\r\n";
+            innerMessage+="Inner Exception: \r\n";
             innerMessage += e.Exception.InnerException.InnerException;
+            innerMessage += "\r\n";
+            innerMessage += "Stack Trace: \r\n";
+            innerMessage += e.Exception.StackTrace;
+            innerMessage += "\r\n";
 
             MessageBox.Show(innerMessage, "Exception", MessageBoxButton.OK, MessageBoxImage.Information);
             e.Handled = true;

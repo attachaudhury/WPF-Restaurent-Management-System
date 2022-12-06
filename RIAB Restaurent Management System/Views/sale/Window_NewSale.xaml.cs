@@ -267,11 +267,11 @@ namespace RIAB_Restaurent_Management_System.Views.sale
                 b.Content = item.Name;
                 b.Name = "Deal"+item.Id.ToString();
                 b.FontWeight = FontWeights.Light;
-                b.FontSize = 12;
+                b.FontSize = 20;
                 Brush selectedBrush = myBrushes.ElementAt(i);
                 b.Background = selectedBrush;
-                b.Height = 45;
-                b.Width = 80;
+                b.Height = 30;
+                b.Padding = new Thickness(5, 0, 5,0);
                 b.Margin = new Thickness(2, 2, 2, 2);
                 
                 wp_Deals.Children.Add(b);
